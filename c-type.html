@@ -1,0 +1,2396 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PURCELL — 인플루언서 가이드라인</title>
+
+  <!-- Open Graph (카카오톡/인스타그램/SNS 공유 미리보기) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="퍼셀 인플루언서 가이드라인">
+  <meta property="og:description" content="PURCELL × Creator Campaign — 혹한기 구원크림 IG 릴스 숏폼 가이드">
+  <meta name="description" content="PURCELL × Creator Campaign — 혹한기 구원크림 IG 릴스 숏폼 가이드">
+  <meta property="og:locale" content="ko_KR">
+  <meta name="theme-color" content="#1F3A4D">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="퍼셀 인플루언서 가이드라인">
+  <meta name="twitter:description" content="PURCELL × Creator Campaign — 혹한기 구원크림 IG 릴스 숏폼 가이드">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand: #1F3A4D;
+      --brand-deep: #152A39;
+      --brand-line: #3D6178;
+      --brand-pale: #E4EEF2;
+      --brand-text: #2A6178;
+      --ice: #A8DCEB;
+      --cream: #F6F9FA;
+      --warm-white: #EDF3F5;
+      --text-dark: #18242E;
+      --text-mid: #546673;
+      --text-light: #95A5B0;
+      --border: #D5E0E5;
+      --tag-bg: #E5EEF1;
+      --on-brand: #FFFFFF;
+      --on-brand-accent: #A8DCEB;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: var(--cream);
+      color: var(--text-dark);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      word-break: keep-all;
+      overflow-wrap: break-word;
+    }
+
+    /* BANNER */
+    .banner-wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      position: relative;
+      background: #E9EBEE;
+    }
+    .banner-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .banner-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      text-align: center;
+      padding: 0 24px 34px;
+      background: linear-gradient(to bottom,
+        rgba(20,30,44,0) 42%,
+        rgba(20,30,44,0.30) 64%,
+        rgba(20,30,44,0.70) 86%,
+        rgba(20,30,44,0.88) 100%);
+    }
+    .header-eyebrow {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.35em;
+      font-weight: 400;
+      color: rgba(255,255,255,0.78);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .header-title {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+    }
+    .header-sub {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 10px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.72);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 480px) {
+      .header-title { font-size: 18px; }
+      .banner-overlay { padding: 0 18px 24px; }
+    }
+
+    /* SECTION */
+    .section {
+      padding: 48px 28px;
+      border-bottom: 1px solid var(--border);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .section:last-child { border-bottom: none; }
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      font-weight: 700;
+      color: var(--brand-text);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .section-label::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 1px;
+      background: var(--brand-text);
+    }
+    .section-title {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 20px;
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+    }
+
+    /* ABOUT */
+    .about-lead {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-mid);
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+      line-height: 1.8;
+    }
+    .brand-img-wrap {
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+    }
+    .brand-img-wrap img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+    .about-grid { display: grid; gap: 12px; }
+    .about-item {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+    }
+    .about-item-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--brand-text);
+      margin-bottom: 6px;
+    }
+    .about-item-desc {
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 1.7;
+    }
+    .brand-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: var(--brand);
+      color: var(--on-brand);
+      font-size: 12.5px;
+      font-weight: 600;
+      border-radius: 20px;
+      border: 1px solid var(--brand-line);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      min-height: 44px;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .brand-link-btn:active { opacity: 0.75; }
+
+    /* INFO BOX */
+    .info-box {
+      background: var(--brand);
+      color: var(--on-brand);
+      border: 1px solid var(--brand-line);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+    .info-box-title {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: rgba(255,255,255,0.62);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 13.5px;
+      margin-bottom: 10px;
+    }
+    .info-row:last-child { margin-bottom: 0; }
+    .info-key {
+      min-width: 70px;
+      color: rgba(255,255,255,0.58);
+      font-size: 12px;
+      flex-shrink: 0;
+    }
+    .info-val { color: var(--on-brand); font-weight: 500; line-height: 1.6; }
+    .info-val strong { color: var(--on-brand-accent); }
+
+    /* PRODUCT */
+    .product-box {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .product-photo {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+    }
+    .product-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.4;
+    }
+    .product-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 11px 16px;
+      background: var(--tag-bg);
+      color: var(--brand-text);
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 20px;
+      text-decoration: none;
+      align-self: flex-start;
+      border: 1px solid var(--border);
+      min-height: 44px;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* PRODUCT OPTIONS */
+    .prod-pick-note {
+      font-size: 12px;
+      color: var(--text-mid);
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+    .prod-pick-note strong { color: var(--brand-text); }
+    .prod-option {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 18px;
+      background: #FFFFFF;
+    }
+    .prod-option-head {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 10px;
+    }
+    .prod-option-num {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--brand);
+      color: var(--on-brand);
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .prod-option-items {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-dark);
+      background: var(--tag-bg);
+      border-radius: 8px;
+      padding: 10px 12px;
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+    .prod-option-desc {
+      display: flex;
+      gap: 6px;
+      font-size: 12.5px;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+    .prod-option-desc::before {
+      content: '→';
+      color: var(--brand-text);
+      flex-shrink: 0;
+    }
+    .prod-or {
+      text-align: center;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--text-light);
+    }
+
+    /* PRODUCT PHOTOS */
+    .prod-photo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+    .prod-photo-item {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 8px 6px 10px;
+      text-align: center;
+    }
+    .prod-photo-item img {
+      width: 72%;
+      margin: 0 auto;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      display: block;
+    }
+    .prod-photo-step {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--brand-text);
+      margin-top: 4px;
+    }
+    .prod-photo-cap {
+      font-size: 10.5px;
+      font-weight: 600;
+      color: var(--text-mid);
+      line-height: 1.4;
+      margin-top: 2px;
+      word-break: keep-all;
+    }
+
+    /* ONE-LINE BRIEF */
+    .brief-box {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin-bottom: 20px;
+    }
+    .brief-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--text-light);
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .brief-line {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.55;
+      letter-spacing: -0.01em;
+    }
+    .brief-line em { font-style: normal; color: var(--brand); }
+    .brief-protocol {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-dark);
+      letter-spacing: 0.01em;
+      margin-top: 6px;
+    }
+
+    /* 2-STEP 제품 카드 */
+    .step-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #FFFFFF;
+      padding: 16px 18px;
+      margin-bottom: 12px;
+    }
+    .step-card:last-child { margin-bottom: 0; }
+    .step-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--on-brand);
+      background: var(--brand);
+      padding: 3px 9px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .step-prod-en {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--brand-text);
+      letter-spacing: 0.02em;
+      margin-bottom: 2px;
+    }
+    .step-prod {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.45;
+    }
+    .step-meta {
+      font-size: 11.5px;
+      color: var(--text-light);
+      margin-top: 2px;
+      margin-bottom: 10px;
+    }
+    .step-lead {
+      font-size: 12.5px;
+      color: var(--text-mid);
+      line-height: 1.65;
+      padding: 11px 13px;
+      background: var(--tag-bg);
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+    .step-feat { font-size: 12.5px; line-height: 1.6; margin-bottom: 10px; }
+    .step-feat:last-of-type { margin-bottom: 0; }
+    .step-feat strong { display: block; color: var(--text-dark); margin-bottom: 2px; }
+    .step-feat span { color: var(--text-mid); }
+    .step-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border);
+    }
+    .step-col-label {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--brand-text);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .step-col ul { margin: 0; padding-left: 15px; font-size: 12px; color: var(--text-mid); line-height: 1.65; }
+    .step-col ul strong { color: var(--text-dark); }
+    .step-tags {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--border);
+      font-size: 12px;
+      color: var(--brand-text);
+      font-weight: 500;
+      line-height: 1.7;
+      word-break: keep-all;
+    }
+
+    /* GUARDRAILS */
+    .guard-grid { display: grid; gap: 12px; }
+    .guard-box { border-radius: 12px; padding: 18px 20px; }
+    .guard-box.must { background: var(--text-dark); }
+    .guard-box.avoid { background: var(--warm-white); border: 1px solid var(--border); }
+    .guard-title {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .guard-box.must .guard-title { color: #FFFFFF; }
+    .guard-box.avoid .guard-title { color: var(--text-dark); }
+    .guard-item {
+      font-size: 12.5px;
+      line-height: 1.7;
+      padding: 4px 0 4px 18px;
+      position: relative;
+    }
+    .guard-box.must .guard-item { color: rgba(255,255,255,0.85); }
+    .guard-box.avoid .guard-item { color: var(--text-mid); }
+    .guard-item::before { content: '\25A1'; position: absolute; left: 0; opacity: 0.7; }
+
+    /* ANGLE GUIDE */
+    .angle-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .angle-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #FFFFFF;
+      padding: 14px 16px;
+    }
+    .angle-num {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--brand-text);
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+    .angle-name { font-size: 13px; font-weight: 700; color: var(--text-dark); margin-bottom: 6px; }
+    .angle-desc { font-size: 12px; color: var(--text-mid); line-height: 1.6; }
+    .angle-thumb {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--tag-bg);
+      margin-bottom: 10px;
+    }
+    .angle-thumb img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      display: block;
+    }
+    .angle-thumb-tag {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      background: rgba(30,42,58,0.72);
+      color: #FFFFFF;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 3px 7px;
+      border-radius: 20px;
+      backdrop-filter: blur(2px);
+    }
+
+    /* THUMBNAIL GUIDE */
+    .thumb-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .thumb-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #FFFFFF;
+      overflow: hidden;
+    }
+    .thumb-item img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      display: block;
+      background: var(--tag-bg);
+    }
+    .thumb-cap { padding: 10px 12px 12px; }
+    .thumb-cap-num {
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--brand-text);
+    }
+    .thumb-cap-name { font-size: 12.5px; font-weight: 700; color: var(--text-dark); margin: 2px 0 4px; }
+    .thumb-cap-desc { font-size: 11.5px; color: var(--text-mid); line-height: 1.55; }
+
+    /* RULE CARDS */
+    .rule-grid { display: grid; gap: 10px; }
+    .rule-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #FFFFFF;
+      padding: 16px 18px;
+    }
+    .rule-num { font-size: 10px; font-weight: 700; color: var(--text-light); letter-spacing: 0.1em; }
+    .rule-title { font-size: 13.5px; font-weight: 700; color: var(--text-dark); margin: 2px 0 4px; }
+    .rule-sub { font-size: 12px; font-weight: 700; color: var(--brand-text); margin-bottom: 8px; }
+    .rule-body { font-size: 12.5px; color: var(--text-mid); line-height: 1.65; }
+    .rule-body p { margin-bottom: 6px; }
+    .rule-body p:last-child { margin-bottom: 0; }
+
+    /* CONCEPT REFERENCE LIST */
+    .idea-item {
+      display: flex;
+      gap: 11px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .idea-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .idea-num {
+      flex-shrink: 0;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--brand-text);
+      margin-top: 2px;
+      min-width: 18px;
+    }
+    .idea-name { font-size: 13px; font-weight: 700; color: var(--text-dark); margin-bottom: 3px; }
+    .idea-desc { font-size: 12.5px; color: var(--text-mid); line-height: 1.6; }
+
+    /* FOLD (섹션 아코디언) */
+    .fold {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .fold[open] { border-color: var(--brand-line); }
+    .fold-summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 16px;
+      min-height: 44px;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .fold-summary::-webkit-details-marker { display: none; }
+    .fold-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      background: var(--tag-bg);
+      color: var(--brand-text);
+      font-size: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .fold[open] .fold-icon { background: var(--brand-pale); color: var(--brand-text); border: 1px solid var(--brand-line); }
+    .fold-title { flex: 1; font-size: 13.5px; font-weight: 700; color: var(--text-dark); }
+    .fold-badge {
+      flex-shrink: 0;
+      background: var(--brand);
+      color: var(--on-brand);
+      font-size: 9.5px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 10px;
+      border: 1px solid var(--brand-line);
+    }
+    .fold-count { flex-shrink: 0; font-size: 11px; font-weight: 600; color: var(--text-light); }
+    .fold-chevron { font-size: 11px; color: var(--text-light); transition: transform 0.2s; flex-shrink: 0; }
+    .fold[open] .fold-chevron { transform: rotate(180deg); color: var(--brand-text); }
+    .fold-body { padding: 16px; border-top: 1px solid var(--border); background: var(--cream); }
+    .fold-group { display: flex; flex-direction: column; gap: 10px; }
+
+    @media (max-width: 480px) {
+      .brief-line { font-size: 16.5px; }
+      .brief-protocol { font-size: 14.5px; }
+      .brief-box { padding: 18px 20px; }
+      .step-cols { grid-template-columns: 1fr; gap: 12px; }
+      .angle-item { padding: 10px 11px 13px; }
+      .angle-desc { font-size: 11.5px; }
+      .thumb-cap { padding: 9px 10px 11px; }
+      .thumb-cap-desc { font-size: 11px; }
+      .prod-photo-cap { font-size: 10px; }
+      .guard-box { padding: 16px 18px; }
+    }
+
+    /* MUST / RECOMMEND */
+    .must-list { display: grid; gap: 10px; margin-bottom: 24px; }
+    .must-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+    .must-icon { font-size: 15px; margin-top: 1px; flex-shrink: 0; }
+    .must-item strong { color: var(--text-dark); }
+
+    /* CONCEPT ACCORDION */
+    .concept-intro {
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 1.7;
+    }
+    .concept-pick {
+      display: inline-flex;
+      align-items: center;
+      background: var(--brand);
+      color: var(--on-brand);
+      border: 1px solid var(--brand-line);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 9px;
+      border-radius: 10px;
+      margin: 0 2px;
+    }
+    .concept-list {
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .concept {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .concept[open] { border-color: var(--brand-line); }
+    .concept-summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 16px;
+      min-height: 44px;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .concept-summary::-webkit-details-marker { display: none; }
+    .concept-num {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--tag-bg);
+      color: var(--brand-text);
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .concept[open] .concept-num { background: var(--brand); color: var(--on-brand); border: 1px solid var(--brand-line); }
+    .concept-name { flex: 1; font-size: 13.5px; font-weight: 700; color: var(--text-dark); }
+    .concept-chevron { font-size: 11px; color: var(--text-light); transition: transform 0.2s; flex-shrink: 0; }
+    .concept[open] .concept-chevron { transform: rotate(180deg); color: var(--brand-text); }
+    .concept-body { padding: 2px 16px 18px; border-top: 1px solid var(--border); }
+    .concept-steps {
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      counter-reset: step;
+    }
+    .concept-steps > li {
+      counter-increment: step;
+      display: flex;
+      gap: 10px;
+      font-size: 12.5px;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+    .concept-steps > li::before {
+      content: counter(step);
+      flex-shrink: 0;
+      margin-top: 1px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      color: var(--brand-text);
+      font-size: 10px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .concept-quotes, .concept-refs {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border);
+    }
+    .concept-quotes-label {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--brand-text);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .quote-chip {
+      background: var(--tag-bg);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 12.5px;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+    .quote-chip:last-child { margin-bottom: 0; }
+    .concept-ref-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-dark);
+      text-decoration: none;
+      padding: 9px 12px;
+      margin-bottom: 6px;
+      min-height: 38px;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .concept-ref-link:last-child { margin-bottom: 0; }
+    .concept-ref-link:active { background: var(--tag-bg); }
+    .concept-ref-link::after {
+      content: '→';
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--brand-text);
+    }
+
+    .sub-list { margin: 6px 0 0; padding-left: 18px; font-size: 12.5px; color: var(--text-mid); line-height: 1.6; }
+    .sub-list li { margin-bottom: 4px; }
+    .sub-list li:last-child { margin-bottom: 0; }
+
+    .key-msg-box {
+      background: var(--brand);
+      border: 1px solid var(--brand-line);
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin-bottom: 20px;
+    }
+    .key-msg-title {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: rgba(255,255,255,0.62);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .key-msg-item {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    .key-msg-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .key-msg-badge {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.62);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+    .key-msg-text {
+      font-size: 13px;
+      color: var(--on-brand);
+      line-height: 1.7;
+    }
+    .key-msg-text strong { color: var(--on-brand-accent); }
+    .key-msg-item .sub-list { color: rgba(255,255,255,0.9); font-size: 12.5px; margin-top: 6px; padding-left: 16px; }
+    .key-msg-item .sub-list li { margin-bottom: 5px; }
+    .nb { white-space: nowrap; }
+    /* 깊게 중첩된 링크 라벨에서는 묶음을 풀어 가로 넘침 방지 */
+    .concept-ref-link .nb, .concept-name .nb { white-space: normal; }
+
+    .rec-list {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+    }
+    .rec-title { font-size: 12px; font-weight: 700; color: var(--brand-text); margin-bottom: 12px; }
+    .rec-item { font-size: 12.5px; color: var(--text-mid); padding: 5px 0; border-bottom: 1px solid var(--border); line-height: 1.6; }
+    .rec-item:last-child { border-bottom: none; }
+
+    /* HASHTAG */
+    .hashtag-section { margin-top: 20px; }
+    .hashtag-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-mid);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .hashtag-label .required { background: var(--brand); color: var(--on-brand); font-size: 10px; padding: 2px 7px; border-radius: 10px; border: 1px solid var(--brand-line); }
+    .hashtag-wrap { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+    .tag-group-name {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+    .hashtag {
+      font-size: 13px;
+      padding: 10px 14px;
+      border-radius: 20px;
+      font-weight: 500;
+      cursor: pointer;
+      user-select: none;
+      transition: opacity 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      min-height: 44px;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .hashtag:active { opacity: 0.6; }
+    .hashtag.req { background: var(--brand); color: var(--on-brand); border: 1px solid var(--brand-line); }
+    .hashtag.req::after { content: '⎘'; font-size: 11px; color: rgba(255,255,255,0.55); }
+
+    /* COLLAB */
+    .collab-box {
+      background: var(--brand);
+      border: 1px solid var(--brand-line);
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 20px;
+    }
+    .collab-title {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: rgba(255,255,255,0.62);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .collab-account {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    .collab-account:last-child { border-bottom: none; }
+    .collab-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.85); flex-shrink: 0; }
+    .collab-handle {
+      font-size: 13.5px;
+      color: var(--on-brand);
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .collab-handle::after { content: '⎘'; font-size: 11px; color: rgba(255,255,255,0.5); }
+    .collab-note { margin-left: auto; font-size: 10px; color: rgba(255,255,255,0.55); }
+
+    /* WARNING */
+    .warning-box {
+      background: #FFFBF0;
+      border: 1px solid #F0D080;
+      border-radius: 12px;
+      padding: 16px 18px;
+      font-size: 12.5px;
+      color: #7A5A00;
+      line-height: 1.7;
+      margin-top: 16px;
+    }
+    .warning-box strong { color: #5A3D00; }
+
+    .ref-note { font-size: 11px; color: var(--text-light); margin-bottom: 4px; }
+
+    /* APPLICATION FORM */
+    .form-group { margin-bottom: 18px; }
+
+    /* 제품 라인 선택 */
+    .line-pick { display: grid; gap: 10px; }
+    .line-opt {
+      display: flex;
+      gap: 11px;
+      align-items: flex-start;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      background: #FFFFFF;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .line-opt input[type="radio"] {
+      margin-top: 2px;
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      accent-color: var(--brand);
+    }
+    .line-opt:has(input:checked) {
+      border-color: var(--brand);
+      background: var(--brand-pale);
+    }
+    .line-opt-name {
+      display: block;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 4px;
+    }
+    .line-opt-items {
+      display: block;
+      font-size: 12.5px;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+    .form-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+    .form-label .req { color: #C0504D; margin-left: 2px; }
+    .form-label .opt { font-size: 11px; color: var(--text-light); font-weight: 500; margin-left: 4px; }
+    .form-input, .form-textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 14px;
+      font-family: inherit;
+      color: var(--text-dark);
+      background: white;
+    }
+    .form-input:focus, .form-textarea:focus {
+      outline: none;
+      border-color: var(--brand-line);
+    }
+    .form-input[readonly] { background: var(--warm-white); }
+    .form-textarea { resize: vertical; min-height: 90px; line-height: 1.6; }
+    .form-row-zip { display: flex; gap: 8px; }
+    .form-row-zip .form-input { flex: 1; min-width: 0; }
+    .zip-search-btn {
+      padding: 0 18px;
+      background: var(--text-dark);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .zip-search-btn:active { opacity: 0.8; }
+
+    .note-box {
+      border: 1px dashed var(--brand-line);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-bottom: 16px;
+      background: var(--cream);
+    }
+    .note-box-title { font-size: 13px; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; }
+    .note-box ul { padding-left: 18px; font-size: 12.5px; color: var(--text-mid); line-height: 1.8; }
+
+    .agree-row {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin: 20px 0;
+      font-size: 12.5px;
+      color: var(--text-mid);
+      line-height: 1.7;
+      cursor: pointer;
+    }
+    .agree-row input[type="checkbox"] {
+      margin-top: 3px;
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      accent-color: var(--brand);
+    }
+    .agree-row strong { color: var(--brand); font-weight: 700; }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 16px 20px;
+      background: var(--text-dark);
+      color: white;
+      border: none;
+      border-radius: 14px;
+      font-size: 14.5px;
+      font-weight: 700;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .submit-btn:active { opacity: 0.85; }
+    .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    /* SETTLEMENT (v2) */
+    .settlement-lead { font-size: 13px; color: var(--text-mid); margin-bottom: 20px; line-height: 1.7; }
+    .settle-tag-label {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-mid);
+      background: var(--tag-bg);
+      padding: 4px 10px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+    .settle-doc-text { font-size: 13px; color: var(--text-mid); margin: 0 0 20px; }
+    .settle-copy-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 20px;
+      font-size: 13.5px;
+      color: var(--text-dark);
+    }
+    .settle-copy-box span { word-break: break-all; }
+    .settle-copy-btn {
+      flex-shrink: 0;
+      background: var(--text-dark);
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .settle-copy-btn:active { opacity: 0.8; }
+
+    /* DIVIDER */
+    .divider { height: 1px; background: var(--border); margin: 24px 0; }
+
+    /* COPY TOAST */
+    .copy-toast {
+      position: fixed;
+      bottom: max(32px, env(safe-area-inset-bottom, 32px));
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      background: rgba(30,42,58,0.94);
+      color: white;
+      font-size: 13px;
+      padding: 10px 20px;
+      border-radius: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s, transform 0.2s;
+      z-index: 9999;
+      white-space: nowrap;
+    }
+    .copy-toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* FOOTER */
+    .footer {
+      background: var(--brand);
+      border-top: 1px solid var(--brand-line);
+      color: rgba(255,255,255,0.62);
+      text-align: center;
+      padding: 36px 32px;
+      padding-bottom: max(36px, env(safe-area-inset-bottom, 36px));
+      font-size: 11.5px;
+      letter-spacing: 0.05em;
+      line-height: 1.8;
+    }
+    .footer strong { color: var(--on-brand); }
+
+    /* KOREAN LINE-BREAKING — 마지막 줄에 단어 하나만 남는 것 방지 */
+    .about-lead, .about-item-desc, .concept-intro, .key-msg-text, .quote-chip,
+    .sub-list li, .rec-item, .must-item > div, .info-row, .ref-note,
+    .warning-box, .collab-note {
+      text-wrap: pretty;
+    }
+    .section-title, .header-title, .concept-name, .key-msg-badge,
+    .concept-quotes-label, .rec-title, .about-item-title, .concept-ref-link {
+      text-wrap: balance;
+    }
+
+    @media (max-width: 480px) {
+      .section { padding: 36px 20px; }
+      .section-title { font-size: 18px; }
+      .section-label { font-size: 9.5px; }
+      .about-lead { font-size: 13px; }
+      .info-box { padding: 20px; }
+      .info-row { font-size: 13px; }
+      .info-key { min-width: 62px; font-size: 11px; }
+      .product-name { font-size: 14px; }
+      .key-msg-box { padding: 18px 20px; }
+      .key-msg-text { font-size: 12.5px; }
+      .must-item { font-size: 12.5px; padding: 12px 14px; }
+      .hashtag { font-size: 12px; padding: 10px 12px; }
+      .collab-handle { font-size: 13px; }
+      .footer { padding: 28px 20px; font-size: 11px; padding-bottom: max(28px, env(safe-area-inset-bottom, 28px)); }
+
+      /* 자간 — 좁은 화면에서 한 줄에 더 담기도록 미세 조정 */
+      body { letter-spacing: -0.01em; }
+      .key-msg-badge { font-size: 10.5px; letter-spacing: 0.04em; }
+      .concept-quotes-label { letter-spacing: 0.03em; }
+      .section-label { letter-spacing: 0.18em; }
+      .header-eyebrow { letter-spacing: 0.24em; }
+
+      /* 정렬 — 들여쓰기·여백 축소 */
+      .sub-list { padding-left: 16px; }
+      .quote-chip { font-size: 12px; padding: 9px 11px; }
+      .concept-body { padding: 2px 14px 16px; }
+
+      /* 데스크톱용 수동 줄바꿈 해제 */
+      .pc-br { display: none; }
+
+      /* 터치 영역 44px 확보 */
+      .concept-ref-link { min-height: 44px; }
+    }
+
+    @media (max-width: 360px) {
+      .section { padding: 28px 14px; }
+      .key-msg-box { padding: 16px 16px; }
+      .key-msg-text { font-size: 12px; }
+      .quote-chip { font-size: 11.5px; padding: 8px 10px; }
+      .sub-list { padding-left: 15px; font-size: 12px; }
+      .concept-summary { padding-left: 12px; padding-right: 12px; }
+      .fold-summary { padding-left: 12px; padding-right: 12px; }
+      .fold-body { padding: 14px 12px; }
+      .prod-photo-grid { gap: 6px; }
+      .prod-photo-item { padding: 6px 4px 8px; }
+      .prod-photo-cap { font-size: 9.5px; }
+      .angle-grid, .thumb-grid { gap: 8px; }
+      .section-title { font-size: 17px; }
+      .hashtag { font-size: 11.5px; padding: 9px 10px; }
+      .about-item { padding: 14px 16px; }
+      .info-box { padding: 16px; }
+    }
+
+    /* ===== PURCELL 추가 스타일 ===== */
+
+    /* HERO (이미지 없이 CSS로 구성한 배너) */
+    .hero {
+      max-width: 640px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(120% 80% at 85% 0%, rgba(168,220,235,0.35) 0%, rgba(168,220,235,0) 55%),
+        linear-gradient(180deg, rgba(19,38,58,0.30) 0%, rgba(19,38,58,0.10) 25%, rgba(19,38,58,0.70) 52%, rgba(19,38,58,0.95) 70%, #13263A 100%),
+        url('image/product.jpg') center top / 100% auto no-repeat,
+        #13263A;
+      color: #FFFFFF;
+      padding: 64% 28px 40px;
+      text-align: center;
+    }
+    .hero::before, .hero::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.9);
+      box-shadow:
+        40px 60px 0 -1px rgba(255,255,255,0.55),
+        -120px 140px 0 -1px rgba(255,255,255,0.4),
+        180px 30px 0 -2px rgba(255,255,255,0.5),
+        -60px 220px 0 -1px rgba(255,255,255,0.35),
+        220px 200px 0 -1px rgba(255,255,255,0.45),
+        -200px 40px 0 -2px rgba(255,255,255,0.5),
+        110px 260px 0 -2px rgba(255,255,255,0.35);
+      width: 4px; height: 4px;
+    }
+    .hero::before { top: 24px; left: 46%; }
+    .hero::after { top: 70px; left: 30%; opacity: 0.6; }
+    .hero-launch {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: var(--ice);
+      border: 1px solid rgba(168,220,235,0.5);
+      border-radius: 20px;
+      padding: 4px 12px;
+      margin-bottom: 18px;
+    }
+    .hero .header-eyebrow { margin-bottom: 8px; }
+    .hero .header-title { font-size: 28px; margin-bottom: 6px; }
+    .hero-product {
+      font-size: 13px;
+      color: rgba(255,255,255,0.78);
+      margin-bottom: 22px;
+    }
+    .hero-product strong { color: var(--ice); font-weight: 700; }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+    .hero-stat {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 12px;
+      padding: 12px 6px 10px;
+    }
+    .hero-stat-num {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.1;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+    }
+    .hero-stat-num small { font-size: 13px; font-weight: 500; margin-left: 1px; }
+    .hero-stat-label { font-size: 10.5px; color: rgba(255,255,255,0.68); margin-top: 4px; line-height: 1.4; }
+    @media (max-width: 480px) {
+      .hero { padding: 64% 18px 30px; }
+      .hero .header-title { font-size: 21px; }
+      .hero-stat-num { font-size: 20px; }
+      .hero-stat-label { font-size: 9.5px; }
+    }
+
+    /* 효능 리스트 */
+    .claim-list { list-style: none; display: grid; gap: 6px; margin: 0; padding: 0; }
+    .claim-list li {
+      display: flex;
+      gap: 8px;
+      font-size: 12.5px;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+    .claim-list li::before { content: '✓'; color: var(--brand-text); font-weight: 700; flex-shrink: 0; }
+    .claim-list strong { color: var(--text-dark); }
+
+    /* 피부 고민 칩 */
+    .concern-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
+    .concern-chip {
+      text-align: center;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 6px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+    .concern-chip span { display: block; font-size: 10.5px; font-weight: 500; color: var(--text-light); margin-top: 2px; }
+    .concern-chip { padding: 6px 6px 10px; }
+    .concern-chip img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 7px;
+      margin-bottom: 8px;
+      background: var(--tag-bg);
+    }
+
+    /* 제품 사진 */
+    .product-photo { aspect-ratio: 4 / 3; object-fit: cover; object-position: center 40%; }
+    .prod-photo-item.tex { padding: 0 0 10px; overflow: hidden; }
+    .prod-photo-item.tex img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+    .prod-photo-item.tex .prod-photo-cap { margin-top: 8px; }
+
+    /* 릴스 타임라인 */
+    .timeline { display: grid; gap: 8px; margin-top: 14px; }
+    .tl-item {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 12px;
+      align-items: start;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 14px;
+    }
+    .tl-time {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--on-brand);
+      background: var(--brand);
+      border-radius: 8px;
+      text-align: center;
+      padding: 6px 4px;
+      line-height: 1.3;
+    }
+    .tl-name { font-size: 13px; font-weight: 700; color: var(--text-dark); margin-bottom: 3px; }
+    .tl-desc { font-size: 12.5px; color: var(--text-mid); line-height: 1.6; }
+    .tl-desc ul { padding-left: 15px; margin-top: 2px; }
+
+    .spec-table { margin-top: 14px; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: #FFFFFF; }
+    .spec-row { display: grid; grid-template-columns: 78px 1fr; border-bottom: 1px solid var(--border); }
+    .spec-row:last-child { border-bottom: none; }
+    .spec-key { background: var(--tag-bg); font-size: 11.5px; font-weight: 700; color: var(--brand-text); padding: 10px 12px; }
+    .spec-val { font-size: 12.5px; color: var(--text-mid); padding: 10px 12px; line-height: 1.6; }
+    .spec-val strong { color: var(--text-dark); }
+
+    /* 키컷 비주얼 (이미지 대체) */
+    .cut-visual {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      aspect-ratio: 3 / 4;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--brand-text);
+      background: linear-gradient(160deg, var(--tag-bg), var(--brand-pale));
+    }
+    .cut-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .cut-visual .cut-emoji { display: block; font-size: 28px; margin-bottom: 6px; }
+    .cut-visual.split { background: linear-gradient(90deg, #DCE3EA 0 50%, #EEF7FA 50% 100%); }
+    .cut-visual.split::after {
+      content: 'BEFORE    AFTER';
+      position: absolute;
+      bottom: 8px; left: 0; right: 0;
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      white-space: pre;
+      color: var(--text-mid);
+    }
+    .cut-visual.split::before {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0; left: 50%;
+      width: 1px;
+      background: rgba(30,42,58,0.25);
+    }
+
+    /* 수치 자막 표 */
+    .num-list { display: grid; gap: 8px; margin-top: 14px; }
+    .num-item {
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      gap: 10px;
+      align-items: center;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 11px 13px;
+    }
+    .num-tag {
+      font-size: 11px;
+      font-weight: 700;
+      text-align: center;
+      color: var(--brand-text);
+      background: var(--tag-bg);
+      border-radius: 6px;
+      padding: 4px 0;
+    }
+    .num-item.key .num-tag { background: var(--brand); color: var(--on-brand); }
+    .num-text { font-size: 12.5px; color: var(--text-dark); line-height: 1.55; }
+    .num-text strong { color: var(--brand-text); }
+
+    .footnote-box {
+      margin-top: 14px;
+      border: 1px dashed var(--brand-line);
+      border-radius: 10px;
+      background: #FFFFFF;
+      padding: 14px;
+    }
+    .footnote-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
+    .footnote-title { font-size: 12px; font-weight: 700; color: var(--text-dark); }
+    .footnote-text { font-size: 11.5px; color: var(--text-mid); line-height: 1.7; word-break: keep-all; }
+
+    .ok-box {
+      margin-top: 14px;
+      background: var(--brand);
+      border: 1px solid var(--brand-line);
+      border-radius: 12px;
+      padding: 16px 18px;
+    }
+    .ok-title { font-size: 11px; letter-spacing: 0.12em; font-weight: 700; color: var(--ice); margin-bottom: 10px; }
+    .ok-box .claim-list li { color: rgba(255,255,255,0.88); }
+    .ok-box .claim-list li::before { color: var(--ice); }
+    .ok-box .claim-list strong { color: #FFFFFF; }
+
+    @media (max-width: 480px) {
+      .tl-item { grid-template-columns: 56px 1fr; gap: 10px; padding: 11px 12px; }
+      .spec-row { grid-template-columns: 68px 1fr; }
+      .concern-chip { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-launch">26년 11월 런칭</div>
+  <div class="header-eyebrow">Influencer Guideline</div>
+  <div class="header-title">퍼셀 가이드라인</div>
+  <div class="hero-product">&lt;<strong>혹한기 구원크림</strong> 출시&gt; IG 릴스 숏폼</div>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-num">98<small>%</small></div>
+      <div class="hero-stat-label">혹한기 환경<br>수분 유지력</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">97<small>%</small></div>
+      <div class="hero-stat-label">1회 사용<br>손상 장벽 개선</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">73<small>%</small></div>
+      <div class="hero-stat-label">1회 사용<br>피부 진정 효과</div>
+    </div>
+  </div>
+  <div class="header-sub">PURCELL × Creator Campaign</div>
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+  <div class="section-label">About Brand</div>
+  <p class="about-lead">
+    <strong style="display:block;font-size:17px;font-weight:700;letter-spacing:0.03em;color:var(--text-dark);line-height:1.45;margin-bottom:6px;">PURCELL · PIXEL BIOME</strong>
+    <span style="display:block;font-size:13px;font-weight:600;letter-spacing:0.02em;color:var(--brand-text);margin-bottom:16px;">약을 개발하는 약학박사가 만든 유산균 스킨케어</span>
+    <strong style="display:block;color:var(--text-dark);font-weight:700;font-size:14px;line-height:1.6;margin-bottom:8px;">약학박사 중에서도, 서울대 약학박사가 개발한 크림</strong>
+    퍼셀은 독자 유산균 성분 <strong>픽셀바이옴</strong>을 중심으로, 피부 장벽을 채우고&middot;막고&middot;스스로 생성하도록 돕는 스킨케어를 만듭니다.
+  </p>
+  <div class="brand-img-wrap">
+    <img src="image/barrier.jpg" alt="퍼셀 3단계 집중 보습 장벽 구조 일러스트">
+  </div>
+  <div class="about-grid">
+    <div class="about-item">
+      <div class="about-item-title"><span style="letter-spacing:0.06em;">#1 STEP · 픽셀바이옴</span></div>
+      <div class="about-item-desc">
+        <strong style="display:block;color:var(--text-dark);font-weight:700;margin-bottom:6px;">퍼셀만의 유산균 성분이 0차 장벽을 형성합니다.</strong>
+        퍼셀 독자 픽셀바이옴 유산균 성분이 피부 외곽에 0차 장벽을 형성해 외부 물질로부터 피부를 보호합니다.
+      </div>
+    </div>
+    <div class="about-item">
+      <div class="about-item-title"><span style="letter-spacing:0.06em;">#2 STEP · 발효 세라마이드 + 세라마이드 캡슐</span></div>
+      <div class="about-item-desc">
+        <strong style="display:block;color:var(--text-dark);font-weight:700;margin-bottom:6px;">비어 있는 장벽까지 찾아 채웁니다.</strong>
+        퍼셀 유산균 성분과 시너지를 내는 발효 세라마이드가 유산균 성분의 피부 장벽 정착을 돕고, 비어 있는 장벽까지 찾아 채워줍니다.
+      </div>
+    </div>
+    <div class="about-item">
+      <div class="about-item-title"><span style="letter-spacing:0.06em;">#3 STEP · 유산균 PDRN 엑소좀</span></div>
+      <div class="about-item-desc">
+        <strong style="display:block;color:var(--text-dark);font-weight:700;margin-bottom:6px;">나노 사이즈로 피부 속까지 침투합니다.</strong>
+        퍼셀이 찾아낸 유산균 PDRN 엑소좀 성분이 나노 사이즈로 피부 속까지 침투해 손상된 피부 장벽의 재건을 돕습니다.
+      </div>
+    </div>
+  </div>
+  <a href="https://purcell.co.kr" target="_blank" rel="noopener" class="brand-link-btn">브랜드 바로가기 →</a>
+</div>
+
+<!-- 캠페인 개요 -->
+<div class="section">
+  <div class="section-label">Campaign Info</div>
+  <div class="section-title">캠페인 개요</div>
+  <div class="info-box">
+    <div class="info-box-title">Campaign Details</div>
+    <div class="info-row">
+      <div class="info-key">형식</div>
+      <div class="info-val">인스타그램 릴스 (Reels)</div>
+    </div>
+    <div class="info-row">
+      <div class="info-key">분량·비율</div>
+      <div class="info-val">30~50초 · 9:16 세로</div>
+    </div>
+    <div class="info-row">
+      <div class="info-key">계정 태그</div>
+      <div class="info-val"><strong>@purcell.seoul</strong> 필수</div>
+    </div>
+    <div class="info-row">
+      <div class="info-key">업로드 일정</div>
+      <div class="info-val">제품 수령 후 <strong>7일</strong> 이내</div>
+    </div>
+    <div class="info-row">
+      <div class="info-key">2차 활용</div>
+      <div class="info-val">파트너십 광고(메타) 권한 승인</div>
+    </div>
+  </div>
+
+  <div class="key-msg-box" style="margin-top:20px;">
+    <div class="key-msg-title">캠페인 목적&nbsp;·&nbsp;<span class="nb">혹한기 구원크림 출시</span></div>
+    <div class="key-msg-text" style="margin-top:-8px;margin-bottom:4px;">다가오는 영하의 날씨, 칼바람과 히터 밑에서 <strong>발라도 당기는 악건성 피부</strong>를 위한 <strong>오래가는 집중 보습크림</strong>을 소개하는 캠페인입니다.</div>
+    <div class="key-msg-item">
+      <div class="key-msg-badge">캠페인 키워드</div>
+      <div class="key-msg-text">혹한기 바람에도 끄떡없는 <strong>#혹한기구원크림</strong></div>
+    </div>
+    <div class="key-msg-item">
+      <div class="key-msg-badge">핵심 요청</div>
+      <div class="key-msg-text"><strong>건조·요철·화장 들뜸</strong> 같은 겨울철 피부 고민을, 바르는 장면과 <strong>무보정 Before / After</strong>로 보여주세요.</div>
+    </div>
+  </div>
+
+  <!-- 제공 제품 -->
+  <div style="font-size:12px;font-weight:700;color:var(--text-mid);margin-bottom:10px;letter-spacing:0.05em;">제공 제품</div>
+  <div class="product-box">
+    <img src="image/product.jpg" alt="픽셀바이옴 세라캡슐 인텐시브 크림" class="product-photo" loading="lazy">
+    <div class="prod-photo-grid">
+      <div class="prod-photo-item tex">
+        <img src="image/texture-01.jpg" alt="세라캡슐 크림 제형 - 스패츌러" loading="lazy">
+        <div class="prod-photo-cap">캡슐 제형</div>
+      </div>
+      <div class="prod-photo-item tex">
+        <img src="image/texture-02.jpg" alt="세라캡슐 크림 제형 - 스푼" loading="lazy">
+        <div class="prod-photo-cap">#산뜻고보습제형</div>
+      </div>
+    </div>
+    <div class="prod-option">
+      <div class="prod-option-head">픽셀바이옴 세라캡슐 인텐시브 크림</div>
+      <div class="prod-option-items">80mL&nbsp;/&nbsp;29,000원</div>
+      <div class="prod-option-desc"><span>캡슐 제형이 사르르 녹아 부드럽게 스미는 <strong class="nb" style="color:var(--text-dark);">#산뜻고보습제형</strong></span></div>
+    </div>
+    <ul class="claim-list">
+      <li><span><strong>유산균 세라마이드 25%</strong> 고함량 함유</span></li>
+      <li><span>극건조 환경 속 <strong>수분 유지율 98.02%</strong></span></li>
+      <li><span>바르고 24시간 후 수분 증가량 <strong>대조 크림 대비 2.66배</strong></span></li>
+      <li><span>1회 사용 후 <strong>피부 진정률 73.96%</strong> #급속진정</span></li>
+      <li><span>1회 사용 후 <strong>장벽 회복률 97.31%</strong> #즉각장벽개선</span></li>
+      <li><span>채우고&middot;막고&middot;스스로 생성하는 <strong>3단계 집중 보습</strong></span></li>
+      <li><span>실제 인체 피부로 확인한 <strong>#가려움증개선</strong> 효과</span></li>
+      <li><span>예민한 피부도 순하게 <strong>#민감성테스트완료</strong></span></li>
+    </ul>
+    <a href="https://purcell.co.kr" target="_blank" rel="noopener" class="product-link-btn">제품 보러가기 →</a>
+  </div>
+</div>
+
+<!-- 제작 가이드 -->
+<div class="section">
+  <div class="section-label">Content Guide</div>
+  <div class="section-title">제작 가이드</div>
+
+  <div class="brief-box">
+    <div class="brief-label">One-line Brief</div>
+    <div class="brief-line">발라도 <em>당기는</em> 악건성 피부를 위한,<br>오래가는 <em>집중 보습</em>크림</div>
+    <div class="brief-protocol">#혹한기구원크림</div>
+    <div style="font-size:12.5px;color:var(--text-mid);margin-top:12px;">애칭 · <strong style="color:var(--text-dark);">악건성 구원 장벽크림 &amp; 장벽세럼</strong></div>
+    <div style="font-size:12px;color:var(--brand-text);margin-top:4px;">#퍼셀 #악건성구원크림 #겨울보습크림 #재생크림</div>
+  </div>
+
+  <div class="spec-table" style="margin:-6px 0 20px;">
+    <div class="spec-row">
+      <div class="spec-key">누구를<br>위한 영상?</div>
+      <div class="spec-val">보습크림을 발라도 금방 다시 당기는 <strong>악건성 피부</strong></div>
+    </div>
+    <div class="spec-row">
+      <div class="spec-key">그 사람의<br>고민은?</div>
+      <div class="spec-val">
+        바를 땐 촉촉한데 몇 시간 뒤면 다시 찢어질 듯 당김<br>
+        히터와 찬바람에 얼굴이 바싹 마름<br>
+        오후만 되면 건조함과 올라오는 각질, 열감 때문에 화장이 무너짐<br>
+        겨울 칼바람에 빨갛게 얼굴이 트고 아픔
+      </div>
+    </div>
+    <div class="spec-row">
+      <div class="spec-key">퍼셀의<br>해결책은?</div>
+      <div class="spec-val">유산균 세라마이드가 비어 있는 장벽을 채워 건조함을 잡고, <strong>피부가 세라마이드를 스스로 만드는 힘</strong>을 기르도록 도와줘요.</div>
+    </div>
+  </div>
+
+  <div class="key-msg-box">
+    <div class="key-msg-title">핵심 요청사항</div>
+    <div class="key-msg-text" style="margin-top:-8px;"><strong>톤앤매너는 자유롭게</strong>, 아래 <strong>흐름과 필수 요소</strong>만 꼭 지켜주세요!</div>
+  </div>
+
+  <div style="font-size:12px;font-weight:700;color:var(--text-mid);margin:24px 0 10px;letter-spacing:0.03em;">&#10004; 영상 및 캡션 필수 포함</div>
+  <div class="must-list">
+    <div class="must-item">
+      <div class="must-icon">&#127916;</div>
+      <div><strong>[영상]</strong> 피부 고민 &rarr; 바르는 장면 &rarr; 시간이 흐른 뒤 피부를 담고, <strong>필수 키컷 4종</strong>(무보정 BEFORE · 캡슐 녹는 제형 · 2분할 B/A · 피부 표현)을 꼭 포함해 주세요.</div>
+    </div>
+    <div class="must-item">
+      <div class="must-icon">&#9997;&#65039;</div>
+      <div><strong>[캡션]</strong> 제품 사용 후 느낀 장점이나 추천 사용 상황을 자유롭게 써주세요. 수치를 노출했다면 <strong>게시글 하단에 각주</strong>를 꼭 넣어주세요.</div>
+    </div>
+    <div class="must-item">
+      <div class="must-icon">&#128279;</div>
+      <div><strong>[계정 태그]</strong> <span class="nb">@purcell.seoul</span> 공식 계정 태그 <strong>필수</strong>입니다.</div>
+    </div>
+  </div>
+
+  <div style="font-size:12px;font-weight:700;color:var(--text-mid);margin:24px 0 10px;letter-spacing:0.03em;">&#9654; 상세 가이드 <span style="font-weight:500;color:var(--text-light);">— 항목을 탭하여 펼쳐보세요</span></div>
+  <div class="concept-list">
+
+    <!-- 1. 제품 상세 -->
+    <details class="concept">
+      <summary class="concept-summary">
+        <span class="concept-num">1</span>
+        <span class="concept-name">제품 상세&nbsp;·&nbsp;<span class="nb">3단계 집중 보습</span></span>
+        <span class="concept-chevron">&#8964;</span>
+      </summary>
+      <div class="concept-body">
+        <div class="concept-intro">왜 퍼셀의 <strong>#유산균세라마이드</strong>여야 할까요? 각 단계의 역할을 확인하신 뒤 소구해 주세요.</div>
+
+        <div style="margin-top:14px;">
+          <div class="step-card">
+            <div class="step-badge">PIXELBIOME CERA CAPSULE INTENSIVE CREAM</div>
+            <div class="step-prod">픽셀바이옴 세라캡슐 인텐시브 크림</div>
+            <div class="step-meta">80mL&nbsp;/&nbsp;29,000원</div>
+            <div class="step-lead">채우고&middot;막고&middot;스스로 생성하는 3단계 집중 보습. 캡슐 제형이 사르르 녹아 부드럽게 스미는 산뜻한 고보습 크림</div>
+            <div class="step-feat"><strong>#1 STEP · 퍼셀만의 유산균 성분 #픽셀바이옴</strong><span>퍼셀 독자 픽셀바이옴 유산균 성분이 피부 외곽에 0차 장벽을 형성해 외부 물질로부터 피부를 보호합니다.</span></div>
+            <div class="step-feat"><strong>#2 STEP · #발효세라마이드 + 세라마이드 캡슐</strong><span>유산균 성분과 시너지를 내는 발효 세라마이드가 유산균 성분의 피부 장벽 정착을 돕고, 비어 있는 장벽까지 찾아 채워줍니다.</span></div>
+            <div class="step-feat"><strong>#3 STEP · 피부 속까지 침투되는 유산균 PDRN 엑소좀</strong><span>퍼셀이 찾아낸 유산균 PDRN 엑소좀 성분이 나노 사이즈로 피부 속까지 침투해 손상된 피부 장벽의 재건을 돕습니다.</span></div>
+            <div class="step-cols">
+              <div class="step-col">
+                <div class="step-col-label">핵심 성분</div>
+                <ul>
+                  <li><strong>유산균 세라마이드 25%</strong></li>
+                  <li>픽셀바이옴 (유산균)</li>
+                  <li>발효 세라마이드</li>
+                  <li>유산균 PDRN 엑소좀</li>
+                </ul>
+              </div>
+              <div class="step-col">
+                <div class="step-col-label">인체적용시험</div>
+                <ul>
+                  <li>극건조 환경 수분 유지 98.02%</li>
+                  <li>24시간 후 수분 증가 대조 크림 대비 2.66배</li>
+                  <li>1회 사용 장벽 회복 97.31%</li>
+                  <li>1회 사용 진정 73.96%</li>
+                  <li>가려움증 개선 · 민감성 테스트 완료</li>
+                </ul>
+              </div>
+            </div>
+            <div class="step-tags">#혹한기구원크림 #산뜻고보습제형 #급속진정 #즉각장벽개선</div>
+          </div>
+        </div>
+
+        <div class="concept-quotes">
+          <div class="concept-quotes-label">왜 유산균 세라마이드가 피부 장벽에 좋을까요? — 이런 고민에</div>
+          <div class="quote-chip">"히터 바람에 화장이 다 들떠요"</div>
+          <div class="quote-chip">"오돌토돌 요철 때문에 미치겠어요"</div>
+          <div class="quote-chip">"크림을 발라도 발라도 건조한 것 같아요"</div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 2. 릴스 구성 -->
+    <details class="concept">
+      <summary class="concept-summary">
+        <span class="concept-num">2</span>
+        <span class="concept-name">릴스 구성&nbsp;·&nbsp;<span class="nb">한눈에 보기</span></span>
+        <span class="concept-chevron">&#8964;</span>
+      </summary>
+      <div class="concept-body">
+        <div class="concept-intro">톤앤매너는 자유롭게, <strong>아래 순서와 필수 요소</strong>만 지켜주세요.</div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-time">0~3초</div>
+            <div>
+              <div class="tl-name">① 후킹</div>
+              <div class="tl-desc">가장 극적인 B/A + 궁금해지는 자막</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">3~8초</div>
+            <div>
+              <div class="tl-name">② 인트로 · 공감/문제 제기</div>
+              <div class="tl-desc">
+                <ul>
+                  <li>세안 후 당김, 크림을 발랐는데 부족할 때</li>
+                  <li>화장했는데 히터 바람에 다 떠버린 화장</li>
+                  <li>히터·칼바람에 들뜬 각질</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">8~22초</div>
+            <div>
+              <div class="tl-name">③ 진행 · 바르는 모습 + B/A</div>
+              <div class="tl-desc">같은 구도로 <strong>Before &rarr; After</strong> 위주로 보여주세요.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">22~30초</div>
+            <div>
+              <div class="tl-name">④ 아웃트로 · 추천</div>
+              <div class="tl-desc">추천해주고 싶은 피부 고민이나 사람 언급 + <strong>댓글/DM 유도</strong></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="spec-table">
+          <div class="spec-row">
+            <div class="spec-key">분량·비율</div>
+            <div class="spec-val"><strong>30~50초</strong> · 9:16 세로</div>
+          </div>
+          <div class="spec-row">
+            <div class="spec-key">필수 장면</div>
+            <div class="spec-val">피부 고민, 바르는 장면, 바르고 시간이 흐른 뒤 피부, B/A</div>
+          </div>
+          <div class="spec-row">
+            <div class="spec-key">B/A 원칙</div>
+            <div class="spec-val">건조·요철(좁쌀)·각질, 화장 후 N시간 뒤 피부 변화<br><strong>무보정 · 같은 구도 · 조명(실내, 자연광) · 거리</strong></div>
+          </div>
+          <div class="spec-row">
+            <div class="spec-key">수치 자막</div>
+            <div class="spec-val">영상당 <strong>1~2개</strong>, 게시글 하단 각주</div>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 3. 콘텐츠 컨셉 -->
+    <details class="concept">
+      <summary class="concept-summary">
+        <span class="concept-num">3</span>
+        <span class="concept-name">콘텐츠 컨셉&nbsp;·&nbsp;<span class="nb">상황 제안</span></span>
+        <span class="concept-chevron">&#8964;</span>
+      </summary>
+      <div class="concept-body">
+        <div class="concept-intro">혹한기, 칼바람, 히터 밑 우리의 피부 고민은? 다가오는 영하 날씨, 춥고 건조해지며 생기는 이런 고민들을 <strong>#혹한기구원크림</strong>이 구원해드립니다.</div>
+        <div class="concern-row">
+          <div class="concern-chip"><img src="image/concern-01.jpg" alt="요철 피부 예시" loading="lazy">요철<span>좁쌀·오돌토돌</span></div>
+          <div class="concern-chip"><img src="image/concern-02.jpg" alt="화장 무너짐 예시" loading="lazy">화장 무너짐<span>히터 바람</span></div>
+          <div class="concern-chip"><img src="image/concern-03.jpg" alt="각질 피부 예시" loading="lazy">각질<span>칼바람·들뜸</span></div>
+        </div>
+
+        <div class="concept-quotes">
+          <div class="concept-quotes-label">대표 컨셉 2</div>
+          <div class="idea-item">
+            <div class="idea-num">C1</div>
+            <div>
+              <div class="idea-name">악건성 구원크림</div>
+              <div class="idea-desc">"나 진짜 심각한 건성 피부거든? 근데 진짜 나 믿고 한번 따라 해봐!"</div>
+            </div>
+          </div>
+          <div class="idea-item">
+            <div class="idea-num">C2</div>
+            <div>
+              <div class="idea-name">만성 좁쌀 잡은 구원크림</div>
+              <div class="idea-desc">"지긋지긋한 N년 묵은 좁쌀 잡은 진짜 방법 푼다! 속건조 잡고 보습 잡아야 근본 해결 가능"</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="concept-quotes">
+          <div class="concept-quotes-label">콘텐츠 상황 제안 4</div>
+          <div class="thumb-grid">
+            <div class="thumb-item">
+              <img src="image/situation-01.jpg" alt="상황 제안 01 - 히터 사무실 생존기" loading="lazy">
+              <div class="thumb-cap">
+                <div class="thumb-cap-num">SITUATION 01 · 히터 사무실 생존기</div>
+                <div class="thumb-cap-name">#POV: 한겨울 직장인 특)</div>
+                <div class="thumb-cap-desc">나갈 땐 멀쩡한데 혹한기 칼바람 맞기만 하면 좀비 되는 사람???</div>
+              </div>
+            </div>
+            <div class="thumb-item">
+              <img src="image/situation-02.jpg" alt="상황 제안 02 - 다른 크림 대비 보습력 강조" loading="lazy">
+              <div class="thumb-cap">
+                <div class="thumb-cap-num">SITUATION 02 · 다른 크림 대비 보습력 강조</div>
+                <div class="thumb-cap-name">아니 촉촉하다는 크림들 다 왜 이럼?</div>
+                <div class="thumb-cap-desc">극건조 환경 수분 98% 유지 + 대조 크림 대비 2.6배 보습 지속</div>
+              </div>
+            </div>
+            <div class="thumb-item">
+              <img src="image/situation-03.jpg" alt="상황 제안 03 - 화장 무너짐 강조" loading="lazy">
+              <div class="thumb-cap">
+                <div class="thumb-cap-num">SITUATION 03 · 화장 무너짐 강조</div>
+                <div class="thumb-cap-name">밖에만 갔다 오면 트고 갈라지는 피부</div>
+                <div class="thumb-cap-desc">환절기, 추워지는 날씨 실내외 온도 차 때문에 화장 무너지는 사람 주목!!</div>
+              </div>
+            </div>
+            <div class="thumb-item">
+              <img src="image/situation-04.jpg" alt="상황 제안 04 - 요철·갈라짐 즉각 해결" loading="lazy">
+              <div class="thumb-cap">
+                <div class="thumb-cap-num">SITUATION 04 · 요철·갈라짐 즉각 해결</div>
+                <div class="thumb-cap-name">피부 오돌토돌 요철? 이렇게만 해봐</div>
+                <div class="thumb-cap-desc">세수하자마자 붉어지고 당기는 사람, 장벽 손상? 건조해서 나는 요철들!! 해결해줄게!!</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ref-note" style="margin-top:14px;">&bull; 위 내용은 <strong>콘텐츠 소재 참고용</strong>입니다. 본인 톤앤매너에 맞게 자유롭게 제작해 주세요.</div>
+      </div>
+    </details>
+
+    <!-- 4. 필수 키컷 -->
+    <details class="concept">
+      <summary class="concept-summary">
+        <span class="concept-num">4</span>
+        <span class="concept-name">필수 키컷&nbsp;·&nbsp;<span class="nb">KEY CUT 4종</span></span>
+        <span class="concept-chevron">&#8964;</span>
+      </summary>
+      <div class="concept-body">
+        <div class="concept-intro">아래 4가지 키컷은 <strong>2차 활용(광고 소재)</strong>을 위해 꼭 담아주세요!</div>
+        <div class="angle-grid" style="margin-top:14px;">
+          <div class="angle-item">
+            <div class="angle-thumb"><img src="image/keycut-a.jpg" alt="무보정 BEFORE 예시" loading="lazy" style="aspect-ratio:1/1;"><span class="angle-thumb-tag">예시</span></div>
+            <div class="angle-num">KEY CUT A</div>
+            <div class="angle-name">무보정 BEFORE</div>
+            <div class="angle-desc">각질 들뜸·요철·당김·붉은기 클로즈업. 보정 필터·뷰티 카메라 <strong>절대 X</strong>, AFTER와 같은 구도·조명으로</div>
+          </div>
+          <div class="angle-item">
+            <div class="angle-thumb"><img src="image/keycut-b.jpg" alt="세라캡슐 녹는 제형 예시" loading="lazy" style="aspect-ratio:1/1;"><span class="angle-thumb-tag">예시</span></div>
+            <div class="angle-num">KEY CUT B</div>
+            <div class="angle-name">세라캡슐 녹는 제형</div>
+            <div class="angle-desc">손등 위나 얼굴에 캡슐이 사르르 녹아 스미는 장면</div>
+          </div>
+          <div class="angle-item">
+            <div class="angle-thumb"><img src="image/keycut-c.jpg" alt="2분할 B/A 예시" loading="lazy" style="aspect-ratio:1/1;"><span class="angle-thumb-tag">예시</span></div>
+            <div class="angle-num">KEY CUT C</div>
+            <div class="angle-name">2분할 B/A</div>
+            <div class="angle-desc">BEFORE / AFTER 또는 얼굴 반쪽 비교</div>
+          </div>
+          <div class="angle-item">
+            <div class="angle-thumb"><img src="image/keycut-d.jpg" alt="탐나는 피부 표현 예시" loading="lazy" style="aspect-ratio:1/1;"><span class="angle-thumb-tag">예시</span></div>
+            <div class="angle-num">KEY CUT D</div>
+            <div class="angle-name">탐나는 피부 표현</div>
+            <div class="angle-desc">광과 보습감이 보이도록 담아주세요.</div>
+          </div>
+        </div>
+        <div class="ref-note" style="margin-top:12px;">&bull; B/A는 최대한 <strong>다양한 상황·시간·장소</strong>에서 여러 개 촬영해 주세요. <strong>사진보다 영상</strong>이 좋아요!</div>
+      </div>
+    </details>
+
+    <!-- 5. 자막 · 워딩 -->
+    <details class="concept">
+      <summary class="concept-summary">
+        <span class="concept-num">5</span>
+        <span class="concept-name">필수 자막&nbsp;·&nbsp;<span class="nb">수치 &amp; 워딩 가이드</span></span>
+        <span class="concept-chevron">&#8964;</span>
+      </summary>
+      <div class="concept-body">
+        <div class="concept-intro">숫자는 <strong>영상당 1~2개만, 자막으로 크게!</strong> 수치 노출 시 <strong>게시글 하단에 각주</strong>를 꼭 넣어주세요.</div>
+
+        <div class="num-list">
+          <div class="num-item key">
+            <div class="num-tag">필수</div>
+            <div class="num-text"><strong>유산균 세라마이드 25%</strong> 고함량</div>
+          </div>
+          <div class="num-item">
+            <div class="num-tag">보습</div>
+            <div class="num-text">극건조 환경(습도 30%&darr;)에서도 <strong>수분 98.02% 유지*</strong></div>
+          </div>
+          <div class="num-item">
+            <div class="num-tag">장벽</div>
+            <div class="num-text">1회 사용 직후 <strong>손상 장벽 97.31% 개선*</strong></div>
+          </div>
+          <div class="num-item">
+            <div class="num-tag">진정</div>
+            <div class="num-text">1회 사용 직후 <strong>붉은기 73.96% 진정*</strong></div>
+          </div>
+          <div class="num-item">
+            <div class="num-tag">보습</div>
+            <div class="num-text">단 1회 사용, 덧바르지 않아도 되는 <strong>24시간 보습 지속*</strong></div>
+          </div>
+          <div class="num-item">
+            <div class="num-tag">저자극</div>
+            <div class="num-text">민감성 피부 일차 자극 테스트 완료</div>
+          </div>
+        </div>
+
+        <div class="footnote-box">
+          <div class="footnote-head">
+            <div class="footnote-title">게시글 하단 각주 (복사해서 사용)</div>
+            <button type="button" class="settle-copy-btn" onclick="copyFootnote()">복사</button>
+          </div>
+          <div class="footnote-text" id="footnoteText">*인체적용시험 결과(에이치엘케이 클리니컬센터, 성인 여성 23명). 97.31%·73.96%: 테이프 박리로 손상 유도한 피부, 1회 사용 직후 일시적 개선 / 98.02%: 습도 30% 미만 30분 노출 / 24시간: 1회 사용 후 24시간 측정. 개인차 있음.</div>
+        </div>
+
+        <div class="ok-box">
+          <div class="ok-title">OK · 이렇게 말해주세요</div>
+          <ul class="claim-list">
+            <li><span>추워진 날씨, <strong>혹한기</strong>에 대한 피부 고민 언급</span></li>
+            <li><span><strong>히터 바람</strong>이나 피부가 건조해지는 상황 언급</span></li>
+            <li><span>즉각 보습, <strong>대조 크림 대비 2.6배</strong></span></li>
+            <li><span>진정 효과까지 있어서 붉은기랑 요철에도 효과를 봤다</span></li>
+            <li><span><strong>1회 만에 장벽 97% 즉각 개선</strong></span></li>
+            <li><span>악건성·극건성 · 속당김 완화 · 겉속 보습</span></li>
+            <li><span>칼바람·히터에도 <strong>하루 종일 촉촉</strong></span></li>
+            <li><span>메이크업 후 피부 수분감 지속 변화</span></li>
+            <li><span>진정 · 붉은기 진정</span></li>
+            <li><span>민감성 피부 테스트 완료 · 순한</span></li>
+          </ul>
+        </div>
+
+        <div class="warning-box">
+          <strong>트러블이나 좁쌀을 얘기할 때</strong><br>
+          "좁쌀까지 쑥쑥 들어가는 느낌이었어요"처럼 <strong>본인 경험</strong>으로 말하는 건 모두 좋아요!<br>
+          다만 <strong>검증된 제품 효능처럼 단정하는 표현</strong>은 피해주세요.
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="fold-group">
+  <details class="fold">
+    <summary class="fold-summary">
+      <span class="fold-icon">&#9878;</span>
+      <span class="fold-title">콘텐츠 가드레일</span>
+      <span class="fold-count">Must&nbsp;/&nbsp;Avoid</span>
+      <span class="fold-chevron">&#8964;</span>
+    </summary>
+    <div class="fold-body">
+  <div class="ref-note" style="margin-bottom:12px;">필수 요소와 금지 표현을 분리해 크리에이티브 자유도를 지켜주세요.</div>
+  <div class="guard-grid">
+    <div class="guard-box must">
+      <div class="guard-title">Must Include</div>
+      <div class="guard-item">피부 고민 · 바르는 장면 · 시간 경과 후 피부 · B/A</div>
+      <div class="guard-item">필수 키컷 4종 (A 무보정 BEFORE ~ D 피부 표현)</div>
+      <div class="guard-item">수치 자막 1~2개 + 게시글 하단 각주</div>
+      <div class="guard-item">@purcell.seoul 계정 태그 · 필수 해시태그</div>
+      <div class="guard-item">광고/협찬 표기</div>
+    </div>
+    <div class="guard-box avoid">
+      <div class="guard-title">Avoid</div>
+      <div class="guard-item">보정 필터 · 뷰티 카메라 사용</div>
+      <div class="guard-item">B/A 구도·조명·거리를 다르게 촬영</div>
+      <div class="guard-item">각주 없이 수치만 노출</div>
+      <div class="guard-item">트러블·좁쌀 개선을 검증된 효능처럼 단정</div>
+      <div class="guard-item">상업 음원 등 제3자 저작권 침해 요소</div>
+    </div>
+  </div>
+    </div>
+  </details>
+
+  <details class="fold">
+    <summary class="fold-summary">
+      <span class="fold-icon">&#128203;</span>
+      <span class="fold-title">업로드 &amp; 제출 프로세스</span>
+      <span class="fold-count">4</span>
+      <span class="fold-chevron">&#8964;</span>
+    </summary>
+    <div class="fold-body">
+  <div class="rule-grid">
+    <div class="rule-card">
+      <div class="rule-num">01</div>
+      <div class="rule-title">계정 태그</div>
+      <div class="rule-sub"><span class="nb">@purcell.seoul</span> 공식 계정 태그 필수</div>
+      <div class="rule-body">
+        <p>게시물 업로드 시 퍼셀 공식 계정을 꼭 태그해 주세요.</p>
+      </div>
+    </div>
+    <div class="rule-card">
+      <div class="rule-num">02</div>
+      <div class="rule-title">업로드 일정</div>
+      <div class="rule-sub">제품 수령 후 7일 이내</div>
+      <div class="rule-body">
+        <p>제품 수령일 기준 <strong>7일 이내</strong> 업로드를 부탁드립니다.</p>
+      </div>
+    </div>
+    <div class="rule-card">
+      <div class="rule-num">03</div>
+      <div class="rule-title">구글폼 제출</div>
+      <div class="rule-sub">업로드 후 별도 알림</div>
+      <div class="rule-body">
+        <p>업로드 후 영상 링크를 제출해 주세요. 제출 구글폼은 <strong>별도로 안내</strong>드립니다.</p>
+      </div>
+    </div>
+    <div class="rule-card">
+      <div class="rule-num">04</div>
+      <div class="rule-title">2차 활용 안내</div>
+      <div class="rule-sub">파트너십 광고 권한 승인</div>
+      <div class="rule-body">
+        <p>업로드해 주신 영상은 <strong>조회수 광고(메타 파트너십 광고)</strong>로 전환될 수 있어요.</p>
+        <p>크리에이터분의 콘텐츠 인사이트에도 도움이 되는 형태로, 업로드 후 <strong>파트너십 광고 권한 승인</strong> 부탁드립니다. &#9786;</p>
+      </div>
+    </div>
+  </div>
+    </div>
+  </details>
+
+  <details class="fold">
+    <summary class="fold-summary">
+      <span class="fold-icon">&#9997;</span>
+      <span class="fold-title">캡션 참고사항</span>
+      <span class="fold-count">Tip</span>
+      <span class="fold-chevron">&#8964;</span>
+    </summary>
+    <div class="fold-body">
+  <div class="rec-list">
+    <div class="rec-title">이렇게 써주세요</div>
+    <div class="rec-item">제품 사용 후 느낀 장점 or 추천 사용 상황을 언급하며, 실감한 장점을 자유롭게 써주세요!</div>
+    <div class="rec-item">ex) "히터 사무실 출근하는 극건성이면 무조건 써봐!"</div>
+    <div class="rec-item">수치를 언급했다면 게시글 하단에 <strong>각주</strong>를 붙여주세요.</div>
+  </div>
+  <div class="hashtag-label" style="margin-top:16px;">댓글 유도 키워드 <span class="required">참고</span></div>
+  <div class="hashtag-wrap" style="margin-bottom:0;">
+    <div class="hashtag req">혹한기구원크림</div>
+    <div class="hashtag req">25%</div>
+    <div class="hashtag req">반쪽</div>
+    <div class="hashtag req">당김</div>
+    <div class="hashtag req">요철</div>
+    <div class="hashtag req">좁쌀</div>
+  </div>
+    </div>
+  </details>
+
+  <details class="fold">
+    <summary class="fold-summary">
+      <span class="fold-icon">#</span>
+      <span class="fold-title">해시태그</span>
+      <span class="fold-badge">필수</span>
+      <span class="fold-chevron">&#8964;</span>
+    </summary>
+    <div class="fold-body">
+  <div class="hashtag-section" style="margin-top:0;">
+    <div class="hashtag-label">필수 해시태그 <span class="required">필수</span></div>
+    <div class="hashtag-wrap">
+      <div class="hashtag req">#퍼셀</div>
+      <div class="hashtag req">#구원크림</div>
+      <div class="hashtag req">#수분크림</div>
+      <div class="hashtag req">#보습크림</div>
+      <div class="hashtag req">#혹한기구원크림</div>
+    </div>
+    <div class="hashtag-label">계정 태그 <span class="required">필수</span></div>
+    <div class="hashtag-wrap">
+      <div class="hashtag req">@purcell.seoul</div>
+    </div>
+    <div class="ref-note">&bull; 태그를 탭하면 복사됩니다. 그 외 협의된 개별 해시태그가 있는 경우 함께 추가해 주세요.</div>
+  </div>
+    </div>
+  </details>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="warning-box">
+    &#9888;&#65039; 업로드된 콘텐츠의 <span class="nb">파트너십 광고 전환</span> 및 2차 활용에 동의하는 것으로 간주됩니다.
+  </div>
+</div>
+
+<!-- 캠페인 신청 -->
+<div class="section">
+  <div class="section-label">Application</div>
+  <div class="section-title">캠페인 신청</div>
+
+  <form id="applicationForm" onsubmit="return submitApplication(event)">
+    <div class="form-group">
+      <label class="form-label">제공 제품</label>
+      <input type="hidden" name="productLine" value="퍼셀 픽셀바이옴 세라캡슐 인텐시브 크림">
+      <div class="line-pick">
+        <div class="line-opt" style="cursor:default;border-color:var(--brand);background:var(--brand-pale);">
+          <span>
+            <span class="line-opt-name">혹한기 구원크림</span>
+            <span class="line-opt-items"><span class="nb">픽셀바이옴 세라캡슐 인텐시브 크림</span> (80mL)</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="appName">이름<span class="req">*</span></label>
+      <input type="text" id="appName" name="name" class="form-input" placeholder="홍길동" required>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="appInstagram">인스타그램 링크<span class="req">*</span></label>
+      <input type="text" id="appInstagram" name="instagram" class="form-input" placeholder="@username 또는 instagram.com/username" required>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="appPhone">휴대폰<span class="req">*</span></label>
+      <input type="tel" id="appPhone" name="phone" class="form-input" placeholder="010-0000-0000" inputmode="numeric" pattern="[0-9\-]*" required>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="appEmail">이메일<span class="opt">(선택)</span></label>
+      <input type="email" id="appEmail" name="email" class="form-input" placeholder="name@email.com">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="appZip">우편번호<span class="req">*</span></label>
+      <div class="form-row-zip">
+        <input type="text" id="appZip" name="zipcode" class="form-input" placeholder="00000" inputmode="numeric" pattern="[0-9]*" maxlength="5" readonly required>
+        <button type="button" class="zip-search-btn" onclick="searchAddress()">주소 검색</button>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="appRoadAddress">배송지 주소<span class="req">*</span></label>
+      <input type="text" id="appRoadAddress" name="roadAddress" class="form-input" placeholder="도로명 주소" readonly required>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="appDetailAddress">상세 주소<span class="req">*</span></label>
+      <input type="text" id="appDetailAddress" name="detailAddress" class="form-input" placeholder="동·호수 등" required>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="appNote">요청사항<span class="opt">(선택)</span></label>
+      <textarea id="appNote" name="note" class="form-textarea" placeholder="배송 관련 요청사항을 적어주세요"></textarea>
+    </div>
+
+    <input type="hidden" id="appFullAddress" name="fullAddress">
+
+    <div class="warning-box">
+      ⚠️ <strong>배송지는 매 캠페인마다 새로 확인합니다.</strong><br>
+      오배송 방지를 위해 입력값을 다시 한번 체크해 주세요.
+    </div>
+
+    <div class="note-box" style="margin-top:16px;">
+      <div class="note-box-title">📌 정산 안내</div>
+      <ul>
+        <li>정산 자료 제출 후 <strong>2주</strong> 이내 지급됩니다.</li>
+      </ul>
+    </div>
+
+    <div class="note-box">
+      <div class="note-box-title">📌 콘텐츠 활용 안내</div>
+      <ul>
+        <li>업로드해 주신 영상은 조회수 광고(메타 파트너십 광고)로 전환될 수 있으며, 업로드 후 파트너십 광고 권한 승인을 부탁드립니다.</li>
+        <li>2차 활용에 동의해 주신 분들의 콘텐츠는 PURCELL 공식 홈페이지, SNS, 플랫폼 등에 활용될 수 있는 점 참고 부탁드립니다.</li>
+      </ul>
+    </div>
+
+    <label class="agree-row">
+      <input type="checkbox" id="appAgree" name="agree" required>
+      <span>안내된 캠페인별 가이드라인 및 고료 조건을 확인했으며 이에 동의합니다.<br><br>제작된 콘텐츠는 브랜드 및 SIRIAI의 2차 활용에 동의합니다.<br><br><strong>(필수)</strong> 진행 제품은 브랜드 프로모션 상황에 따라 일부 변경될 수 있습니다.<br><br><strong>[필수]</strong> 캠페인 선정 후 개인 변심 및 일방적인 취소는 불가하며, 취소 시 <strong>제공된 제품 비용이 발생할 수 있음</strong>에 동의합니다.</span>
+    </label>
+
+    <button type="submit" class="submit-btn">퍼셀 캠페인 지원서 제출하기</button>
+  </form>
+</div>
+
+<!-- 정산 -->
+<div class="section">
+  <div class="section-label">Settlement</div>
+  <div class="section-title">정산</div>
+  <div class="settlement-lead">캠페인 선정 완료 후 정산을 위한 서류 및 연락처를 누락 없이 제출해 주세요.<br>정산은 <strong>정산 자료 제출 후 2주</strong> 이내 지급됩니다.</div>
+
+  <div class="settle-tag-label">제출 서류</div>
+  <div class="settle-doc-text">— 성함, 연락처, 신분증 사본 (뒷자리 포함), 통장 사본</div>
+
+  <div class="settle-tag-label">수신 이메일</div>
+  <div class="settle-copy-box">
+    <span>hwangyksiriai@gmail.com</span>
+    <button type="button" class="settle-copy-btn" onclick="copyText('hwangyksiriai@gmail.com')">복사</button>
+  </div>
+
+  <div class="settle-tag-label">메일 제목</div>
+  <div class="settle-copy-box">
+    <span>퍼셀 _이름_@인스타핸들</span>
+    <button type="button" class="settle-copy-btn" onclick="copyText('퍼셀 _이름_@인스타핸들')">복사</button>
+  </div>
+
+  <div class="warning-box">
+    ! 정산 자료는 브랜드로부터 확인 안내를 받은 인플루언서에 한해서 제출해 주세요.<br>
+    ! 확정 안내를 받지 못한 경우 서류를 제출하지 마세요.
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <strong>PURCELL (퍼셀)</strong><br>
+  본 가이드라인은 선별된 크리에이터에게만 제공되는 자료입니다.<br>
+  문의사항이 있으시면 담당자에게 연락해 주세요.<br>
+  감사합니다. 잘 부탁드립니다!
+</div>
+
+<div class="copy-toast" id="copyToast"></div>
+
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>
+  function showToast(text) {
+    const toast = document.getElementById('copyToast');
+    toast.textContent = text;
+    toast.classList.add('show');
+    clearTimeout(toast._timer);
+    toast._timer = setTimeout(() => toast.classList.remove('show'), 1500);
+  }
+
+  function showCopyToast(text) {
+    showToast('"' + text + '" 복사됨');
+  }
+
+  function copyText(text) {
+    navigator.clipboard.writeText(text).then(() => showCopyToast(text));
+  }
+
+  function copyFootnote() {
+    const text = document.getElementById('footnoteText').textContent.trim();
+    navigator.clipboard.writeText(text).then(() => showToast('각주가 복사되었습니다'));
+  }
+
+  document.querySelectorAll('.hashtag').forEach(el => {
+    el.addEventListener('click', () => {
+      const tag = el.textContent.replace('⎘', '').trim();
+      copyText(tag);
+    });
+  });
+
+  // 신청 폼: 주소 검색 (다음 우편번호 서비스)
+  function searchAddress() {
+    new daum.Postcode({
+      oncomplete: function(data) {
+        document.getElementById('appZip').value = data.zonecode;
+        document.getElementById('appRoadAddress').value = data.roadAddress;
+        updateFullAddress();
+        document.getElementById('appDetailAddress').focus();
+      }
+    }).open();
+  }
+
+  // 배송지 주소 + 상세 주소를 하나의 값으로 합쳐서 hidden 필드에 저장
+  function updateFullAddress() {
+    const road = document.getElementById('appRoadAddress').value.trim();
+    const detail = document.getElementById('appDetailAddress').value.trim();
+    document.getElementById('appFullAddress').value = [road, detail].filter(Boolean).join(' ');
+  }
+  const appDetailAddressEl = document.getElementById('appDetailAddress');
+  if (appDetailAddressEl) appDetailAddressEl.addEventListener('input', updateFullAddress);
+
+  // 인스타그램 입력값을 https://instagram.com/handle 형태로 정규화
+  function normalizeInstagramLink(value) {
+    let v = (value || '').trim();
+    if (!v) return '';
+    if (/^https?:\/\//i.test(v)) return v;
+    v = v.replace(/^@/, '');
+    v = v.replace(/^(www\.)?instagram\.com\//i, '');
+    v = v.replace(/^\/+/, '').replace(/\/+$/, '');
+    return 'https://instagram.com/' + v;
+  }
+
+  const appInstagramEl = document.getElementById('appInstagram');
+  if (appInstagramEl) {
+    appInstagramEl.addEventListener('blur', () => {
+      if (appInstagramEl.value.trim()) {
+        appInstagramEl.value = normalizeInstagramLink(appInstagramEl.value);
+      }
+    });
+  }
+
+  // 구글시트 연동 설정
+  // 퍼셀용 스프레드시트에 Apps Script를 배포한 뒤 발급되는 웹 앱 URL을 아래에 붙여넣어 주세요.
+  const GAS_WEB_APP_URL = 'YOUR_WEB_APP_URL';
+  const APP_BRAND = 'PURCELL';
+  const APP_TIER = 'C';
+  const APP_PRICE = '15만원';
+
+  // 우편번호(zipcode)·휴대폰(phone)은 앞자리 0 보존을 위해 항상 문자열로 취급할 것
+  function submitApplication(e) {
+    e.preventDefault();
+    updateFullAddress();
+
+    const form = document.getElementById('applicationForm');
+    const data = {
+      brand: APP_BRAND,
+      tier: APP_TIER,
+      price: APP_PRICE,
+      productLine: (form.productLine.value || '').trim(),
+      name: form.name.value.trim(),
+      instagram: normalizeInstagramLink(form.instagram.value),
+      phone: String(form.phone.value.trim()),
+      email: form.email.value.trim(),
+      zipcode: String(form.zipcode.value.trim()),
+      address: form.fullAddress.value,
+      note: form.note.value.trim()
+    };
+
+    if (!GAS_WEB_APP_URL || GAS_WEB_APP_URL.indexOf('YOUR_WEB_APP_URL') !== -1) {
+      console.log('캠페인 신청 데이터', data);
+      showToast('구글시트 연동 URL이 설정되지 않았습니다');
+      return false;
+    }
+
+    const submitBtn = document.querySelector('.submit-btn');
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = '제출 중...'; }
+
+    fetch(GAS_WEB_APP_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(data)
+    }).then(() => {
+      showToast('제출이 완료되었습니다');
+      form.reset();
+      document.getElementById('appFullAddress').value = '';
+    }).catch(() => {
+      showToast('제출 중 오류가 발생했습니다. 다시 시도해 주세요.');
+    }).finally(() => {
+      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = '퍼셀 캠페인 지원서 제출하기'; }
+    });
+
+    return false;
+  }
+</script>
+</body>
+</html>
