@@ -233,6 +233,8 @@
       white-space: nowrap;
     }
     .hub-card-arrow { flex: none; font-size: 14px; color: var(--brand-text); }
+    .hub-card.is-brand { margin-top: 10px; border-style: dashed; border-color: var(--brand-line); background: var(--warm-white); }
+    .hub-card.is-brand .hub-card-badge { background: #FFFFFF; color: var(--brand); font-size: 11px; }
 
     .hub-note {
       font-size: 11px;
@@ -320,7 +322,8 @@
     { badge: 'D', type: 'D Type', fee: '20만원',    href: 'd-type.html' },
     { badge: 'E', type: 'E Type', fee: '25만원',    href: 'e-type.html' },
     { badge: 'F', type: 'F Type', fee: '30만원',    href: 'f-type.html' },
-    { badge: 'G', type: 'G Type', fee: '고료 조정', href: 'g-type.html' }
+    { badge: 'G', type: 'G Type', fee: '고료 조정', href: 'g-type.html' },
+    { badge: 'BR', type: '브랜드 공유용', fee: '신청·정산 제외', href: 'brand.html', sub: '브랜드 전달용 가이드라인', brand: true }
   ];
 
   var PASSWORD = '0907';
@@ -341,14 +344,14 @@
 
   function renderList() {
     hubList.innerHTML = GUIDES.map(function (g) {
-      return '<a class="hub-card" href="' + esc(g.href) + '">' +
+      return '<a class="hub-card' + (g.brand ? ' is-brand' : '') + '" href="' + esc(g.href) + '">' +
                '<span class="hub-card-left">' +
                  '<span class="hub-card-badge">' + esc(g.badge) + '</span>' +
                  '<span>' +
                    '<span class="hub-card-title">' + esc(g.type) +
                      '<span class="hub-card-fee">' + esc(g.fee) + '</span>' +
                    '</span>' +
-                   '<span class="hub-card-sub">크리에이터 가이드라인</span>' +
+                   '<span class="hub-card-sub">' + esc(g.sub || '크리에이터 가이드라인') + '</span>' +
                  '</span>' +
                '</span>' +
                '<span class="hub-card-arrow">&rarr;</span>' +
