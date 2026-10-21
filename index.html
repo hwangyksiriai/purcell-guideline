@@ -236,6 +236,56 @@
     .hub-card.is-brand { margin-top: 10px; border-style: dashed; border-color: var(--brand-line); background: var(--warm-white); }
     .hub-card.is-brand .hub-card-badge { background: #FFFFFF; color: var(--brand); font-size: 11px; }
 
+    /* FOLDER */
+    .hub-folders { display: flex; flex-direction: column; gap: 12px; }
+    .hub-folder {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .hub-folder-summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 60px;
+      padding: 14px 16px;
+      cursor: pointer;
+      list-style: none;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+    .hub-folder-summary::-webkit-details-marker { display: none; }
+    .hub-folder-icon {
+      flex: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--brand-pale);
+      color: var(--brand);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hub-folder-icon svg { width: 18px; height: 18px; }
+    .hub-folder-text { flex: 1; min-width: 0; }
+    .hub-folder-name { display: block; font-size: 15px; font-weight: 700; letter-spacing: -0.01em; }
+    .hub-folder-sub { display: block; font-size: 11.5px; color: var(--text-mid); margin-top: 1px; }
+    .hub-folder-count {
+      flex: none;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--brand-text);
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2px 9px;
+    }
+    .hub-folder-chevron { flex: none; font-size: 12px; color: var(--brand-text); transition: transform .2s ease; }
+    .hub-folder[open] .hub-folder-chevron { transform: rotate(180deg); }
+    .hub-folder-body { padding: 0 12px 12px; }
+
     .hub-note {
       font-size: 11px;
       color: var(--text-light);
@@ -301,7 +351,7 @@
       <div class="hub-title">혹한기 구원크림 출시</div>
       <div class="hub-desc">픽셀바이옴 세라캡슐 인텐시브 크림&nbsp;&mdash; 안내받으신 <strong>타입</strong>의 가이드라인을 열어주세요.</div>
 
-      <div class="hub-list" id="hubList"></div>
+      <div class="hub-folders" id="hubList"></div>
 
       <div class="hub-note">&bull; 타입은 브랜드에서 채널 성격에 맞춰 배정해 드립니다. 본인 타입이 확실하지 않은 경우 담당자에게 확인해 주세요.</div>
     </div>
@@ -314,18 +364,25 @@
 </div>
 
 <script>
-  /* 가이드 목록 — 타입 추가·수정은 여기만 바꾸면 됩니다 */
-  var GUIDES = [
-    { badge: 'A', type: 'A Type', fee: '5만원',     href: 'a-type.html' },
-    { badge: 'B', type: 'B Type', fee: '10만원',    href: 'b-type.html' },
-    { badge: 'C', type: 'C Type', fee: '15만원',    href: 'c-type.html' },
-    { badge: 'D', type: 'D Type', fee: '20만원',    href: 'd-type.html' },
-    { badge: 'E', type: 'E Type', fee: '25만원',    href: 'e-type.html' },
-    { badge: 'F', type: 'F Type', fee: '30만원',    href: 'f-type.html' },
-    { badge: 'G', type: 'G Type', fee: '고료 조정', href: 'g-type.html' },
-    { badge: 'H', type: 'H Type', fee: '40만원',    href: 'h-type.html' },
-    { badge: 'I', type: 'I Type', fee: '50만원',    href: 'i-type.html' },
-    { badge: 'BR', type: '브랜드 공유용', fee: '신청·정산 제외', href: 'brand.html', sub: '브랜드 전달용 가이드라인', brand: true }
+  /* 가이드 폴더 — 월별 폴더 추가·수정은 여기만 바꾸면 됩니다 (open: true 면 펼친 상태로 시작) */
+  var FOLDERS = [
+    {
+      name: '10월 진행',
+      sub: '혹한기 구원크림 출시',
+      open: true,
+      guides: [
+        { badge: 'A', type: 'A Type', fee: '5만원',     href: 'a-type.html' },
+        { badge: 'B', type: 'B Type', fee: '10만원',    href: 'b-type.html' },
+        { badge: 'C', type: 'C Type', fee: '15만원',    href: 'c-type.html' },
+        { badge: 'D', type: 'D Type', fee: '20만원',    href: 'd-type.html' },
+        { badge: 'E', type: 'E Type', fee: '25만원',    href: 'e-type.html' },
+        { badge: 'F', type: 'F Type', fee: '30만원',    href: 'f-type.html' },
+        { badge: 'G', type: 'G Type', fee: '고료 조정', href: 'g-type.html' },
+        { badge: 'H', type: 'H Type', fee: '40만원',    href: 'h-type.html' },
+        { badge: 'I', type: 'I Type', fee: '50만원',    href: 'i-type.html' },
+        { badge: 'BR', type: '브랜드 공유용', fee: '신청·정산 제외', href: 'brand.html', sub: '브랜드 전달용 가이드라인', brand: true }
+      ]
+    }
   ];
 
   var PASSWORD = '0907';
@@ -344,8 +401,10 @@
     });
   }
 
-  function renderList() {
-    hubList.innerHTML = GUIDES.map(function (g) {
+  var FOLDER_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>';
+
+  function renderCards(guides) {
+    return guides.map(function (g) {
       return '<a class="hub-card' + (g.brand ? ' is-brand' : '') + '" href="' + esc(g.href) + '">' +
                '<span class="hub-card-left">' +
                  '<span class="hub-card-badge">' + esc(g.badge) + '</span>' +
@@ -358,6 +417,23 @@
                '</span>' +
                '<span class="hub-card-arrow">&rarr;</span>' +
              '</a>';
+    }).join('');
+  }
+
+  function renderList() {
+    hubList.innerHTML = FOLDERS.map(function (f) {
+      return '<details class="hub-folder"' + (f.open ? ' open' : '') + '>' +
+               '<summary class="hub-folder-summary">' +
+                 '<span class="hub-folder-icon">' + FOLDER_SVG + '</span>' +
+                 '<span class="hub-folder-text">' +
+                   '<span class="hub-folder-name">' + esc(f.name) + '</span>' +
+                   (f.sub ? '<span class="hub-folder-sub">' + esc(f.sub) + '</span>' : '') +
+                 '</span>' +
+                 '<span class="hub-folder-count">' + f.guides.length + '</span>' +
+                 '<span class="hub-folder-chevron">&#9660;</span>' +
+               '</summary>' +
+               '<div class="hub-folder-body"><div class="hub-list">' + renderCards(f.guides) + '</div></div>' +
+             '</details>';
     }).join('');
   }
 
