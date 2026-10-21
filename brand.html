@@ -1637,9 +1637,9 @@
     }
     .gnav-list::-webkit-scrollbar { display: none; }
     .gnav-chip {
-      flex: none;
+      flex: 1 0 auto;
       height: 38px;
-      padding: 0 14px;
+      padding: 0 10px;
       border: none;
       border-radius: 100px;
       background: transparent;
@@ -2346,20 +2346,11 @@
     var concepts = document.querySelectorAll('.concept-list > details.concept');
 
     var targets = [
-      ['브랜드', sectionBy('About Brand')],
-      ['캠페인 개요', sectionBy('Campaign Info')],
-      ['제작 가이드', sectionBy('Content Guide')],
-      ['제품 상세', concepts[0]],
-      ['릴스 구성', concepts[1]],
-      ['콘텐츠 컨셉', concepts[2]],
-      ['필수 키컷', concepts[3]],
-      ['자막·워딩', concepts[4]],
-      ['가드레일', foldBy('콘텐츠 가드레일')],
-      ['캡션', foldBy('캡션 참고사항')],
-      ['해시태그', foldBy('해시태그')],
-      ['업로드 체크', document.getElementById('uploadCheck')],
-      ['캠페인 신청', sectionBy('Application')],
-      ['정산', sectionBy('Settlement')]
+      ['개요', sectionBy('Campaign Info')],
+      ['가이드', sectionBy('Content Guide')],
+      ['키컷', concepts[3]],
+      ['체크리스트', document.getElementById('uploadCheck')],
+      ['신청', sectionBy('Application')]
     ].filter(function (t) { return t[1]; });
 
     var chips = targets.map(function (t) {
