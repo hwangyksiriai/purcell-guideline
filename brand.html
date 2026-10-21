@@ -1267,7 +1267,7 @@
         url('image/product.jpg') center top / 100% auto no-repeat,
         #13263A;
       color: #FFFFFF;
-      padding: 64% 28px 40px;
+      padding: min(50vw, 320px) 28px 36px;
       text-align: center;
     }
     .hero::before, .hero::after {
@@ -1328,7 +1328,7 @@
     .hero-stat-num small { font-size: 13px; font-weight: 500; margin-left: 1px; }
     .hero-stat-label { font-size: 10.5px; color: rgba(255,255,255,0.68); margin-top: 4px; line-height: 1.4; }
     @media (max-width: 480px) {
-      .hero { padding: 64% 18px 30px; }
+      .hero { padding: 46vw 18px 26px; }
       .hero .header-title { font-size: 21px; }
       .hero-stat-num { font-size: 20px; }
       .hero-stat-label { font-size: 9.5px; }
@@ -1498,6 +1498,24 @@
       .tl-item { grid-template-columns: 56px 1fr; gap: 10px; padding: 11px 12px; }
       .spec-row { grid-template-columns: 68px 1fr; }
       .concern-chip { font-size: 12px; }
+    }
+    /* 모바일 최적화 */
+    @media (max-width: 480px) {
+      .hero { background-position: 0 0, 0 0, center -16vw, 0 0; }
+      .hero-launch { margin-bottom: 12px; }
+      .hero-product { margin-bottom: 16px; }
+      .hero-stats { gap: 6px; margin-bottom: 16px; }
+      .hero-stat { padding: 10px 4px 8px; }
+      .hero-stat-label { font-size: 10.5px; }
+      /* iOS 입력 시 자동 확대 방지 */
+      .form-input, input[type="text"], input[type="tel"], input[type="email"], textarea, select { font-size: 16px; }
+      /* 터치 영역 */
+      .settle-copy-btn { min-height: 40px; padding-left: 14px; padding-right: 14px; }
+      .agree-row input[type="checkbox"] { width: 22px; height: 22px; flex: none; }
+      .submit-btn { min-height: 52px; }
+      /* 너무 작은 라벨 보정 */
+      .section-label, .fold-badge, .thumb-cap-num { font-size: 10px; }
+      .angle-thumb-tag { font-size: 10px; }
     }
   </style>
 </head>
