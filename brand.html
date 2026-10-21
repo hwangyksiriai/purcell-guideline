@@ -1517,6 +1517,115 @@
       .section-label, .fold-badge, .thumb-cap-num { font-size: 10px; }
       .angle-thumb-tag { font-size: 10px; }
     }
+    /* 업로드 전 체크리스트 */
+    .ucheck {
+      margin-top: 22px;
+      background: #FFFFFF;
+      border: 1.5px solid var(--brand);
+      border-radius: 16px;
+      padding: 20px 18px 18px;
+      scroll-margin-top: 16px;
+    }
+    .ucheck-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
+    .ucheck-title { font-size: 16px; font-weight: 700; color: var(--text-dark); letter-spacing: -0.01em; }
+    .ucheck-count {
+      flex: none;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--brand-text);
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 3px 10px;
+    }
+    .ucheck-sub { font-size: 12.5px; color: var(--text-mid); margin-bottom: 14px; }
+    .ucheck-bar { height: 4px; background: var(--tag-bg); border-radius: 4px; overflow: hidden; margin-bottom: 12px; }
+    .ucheck-bar span { display: block; height: 100%; width: 0; background: var(--brand); transition: width .25s ease; }
+    .ucheck-list { display: grid; gap: 8px; }
+    .ucheck-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      min-height: 48px;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--cream);
+      cursor: pointer;
+      -webkit-user-select: none;
+      user-select: none;
+      transition: background .15s, border-color .15s;
+    }
+    .ucheck-item input {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      margin-top: 1px;
+      accent-color: var(--brand);
+      cursor: pointer;
+    }
+    .ucheck-text { font-size: 13px; color: var(--text-dark); line-height: 1.55; }
+    .ucheck-text small { display: block; font-size: 11.5px; color: var(--text-mid); margin-top: 2px; }
+    .ucheck-item.done { background: var(--brand-pale); border-color: var(--brand-line); }
+    .ucheck-item.done .ucheck-text { color: var(--text-mid); }
+    .ucheck-done {
+      display: none;
+      margin-top: 12px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--on-brand);
+      background: var(--brand);
+      border-radius: 10px;
+      padding: 11px 12px;
+    }
+    .ucheck.all-done .ucheck-done { display: block; }
+    .ucheck-keep {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--border);
+      font-size: 11.5px;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+    .ucheck-keep-title { font-weight: 700; color: var(--text-mid); margin-bottom: 2px; }
+
+    /* 하단 플로팅 버튼 */
+    .ucheck-fab {
+      position: fixed;
+      left: 50%;
+      bottom: max(16px, env(safe-area-inset-bottom, 16px));
+      transform: translate(-50%, 16px);
+      z-index: 900;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 0 20px;
+      border: none;
+      border-radius: 100px;
+      background: var(--brand);
+      color: var(--on-brand);
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      white-space: nowrap;
+      box-shadow: 0 8px 24px rgba(21,42,57,0.28);
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s, transform .2s;
+    }
+    .ucheck-fab.show { opacity: 1; pointer-events: auto; transform: translate(-50%, 0); }
+    .ucheck-fab-count {
+      font-size: 11.5px;
+      background: rgba(255,255,255,0.16);
+      border-radius: 20px;
+      padding: 2px 8px;
+    }
+    body.has-fab .copy-toast { bottom: calc(max(16px, env(safe-area-inset-bottom, 16px)) + 60px); }
+    body.has-fab .footer { padding-bottom: calc(max(36px, env(safe-area-inset-bottom, 36px)) + 56px); }
+
   </style>
 </head>
 <body>
@@ -2043,46 +2152,6 @@
 
   <details class="fold">
     <summary class="fold-summary">
-      <span class="fold-icon">&#128203;</span>
-      <span class="fold-title">업로드 &amp; 제출 프로세스</span>
-      <span class="fold-count">3</span>
-      <span class="fold-chevron">&#8964;</span>
-    </summary>
-    <div class="fold-body">
-  <div class="rule-grid">
-    <div class="rule-card">
-      <div class="rule-num">01</div>
-      <div class="rule-title">계정 태그 및 공동작업자 요청</div>
-      <div class="rule-sub"><span class="nb">@purcell.seoul</span> 공식 계정 태그 필수</div>
-      <div class="rule-body">
-        <p>게시물 업로드 시 퍼셀 공식 계정을 꼭 태그해 주세요.</p>
-      </div>
-    </div>
-    <div class="rule-card">
-      <div class="rule-num">02</div>
-      <div class="rule-title">업로드 일정</div>
-      <div class="rule-sub">제품 수령 후 7일 이내</div>
-      <div class="rule-body">
-        <p>제품 수령일 기준 <strong>7일 이내</strong> 업로드를 부탁드립니다.</p>
-      </div>
-    </div>
-    <div class="rule-card">
-      <div class="rule-num">03</div>
-      <div class="rule-title">2차 활용 안내</div>
-      <div class="rule-sub">파트너십 광고</div>
-      <div class="rule-body">
-        <p>업로드해 주신 영상은 <strong>조회수 광고(메타 파트너십 광고)</strong>로 전환될 수 있어요.</p>
-        <p>크리에이터분의 콘텐츠 인사이트에도 도움이 되는 형태로, 업로드 후 <strong>파트너십 코드</strong> 전달 부탁드립니다.</p>
-        <p><strong>클린본</strong>(자막·텍스트 없는 원본 영상)도 함께 전달 부탁드려요.</p>
-        <div class="ref-note" style="margin-top:8px;">&bull; 업로드 후 3개월간 좋아요·댓글 수 공개 유지 · 게시물 1년간 유지(삭제 불가) · 2차 활용 기간 무기한</div>
-      </div>
-    </div>
-  </div>
-    </div>
-  </details>
-
-  <details class="fold">
-    <summary class="fold-summary">
       <span class="fold-icon">&#9997;</span>
       <span class="fold-title">캡션 참고사항</span>
       <span class="fold-count">Tip</span>
@@ -2133,6 +2202,28 @@
     </div>
   </details>
   </div>
+  <!-- 업로드 전 체크리스트 -->
+  <div class="ucheck" id="uploadCheck">
+    <div class="ucheck-head">
+      <div class="ucheck-title">&#9989; 업로드 전, 확인하셨나요?</div>
+      <div class="ucheck-count" id="ucheckCount">0 / 6</div>
+    </div>
+    <div class="ucheck-sub">게시 전 아래 항목을 하나씩 체크해 주세요.</div>
+    <div class="ucheck-bar"><span id="ucheckBar"></span></div>
+    <div class="ucheck-list">
+      <label class="ucheck-item"><input type="checkbox"><span class="ucheck-text"><strong>@purcell.seoul</strong> 계정 태그 + 공동작업자 요청<small>게시물 업로드 시 공식 계정 태그와 공동작업자 요청을 함께 보내주세요.</small></span></label>
+      <label class="ucheck-item"><input type="checkbox"><span class="ucheck-text">필수 해시태그 5개<small>#퍼셀 #구원크림 #수분크림 #보습크림 #혹한기구원크림</small></span></label>
+      <label class="ucheck-item"><input type="checkbox"><span class="ucheck-text">필수 장면 · 필수 키컷 4종 포함<small>무보정 BEFORE · 캡슐 녹는 제형 · 2분할 B/A · 피부 표현</small></span></label>
+      <label class="ucheck-item"><input type="checkbox"><span class="ucheck-text">수치 자막을 넣었다면 게시글 하단 각주<small>각주는 가이드의 '복사' 버튼으로 그대로 붙여넣어 주세요.</small></span></label>
+      <label class="ucheck-item"><input type="checkbox"><span class="ucheck-text">제품 수령 후 <strong>7일 이내</strong> 업로드</span></label>
+      <label class="ucheck-item"><input type="checkbox"><span class="ucheck-text">업로드 후 <strong>파트너십 코드</strong> · <strong>클린본</strong> 전달<small>영상은 조회수 광고(메타 파트너십 광고)로 활용될 수 있어요. 클린본은 자막·텍스트 없는 원본 영상이에요.</small></span></label>
+    </div>
+    <div class="ucheck-done">모두 확인했어요! 업로드해 주세요 &#128588;</div>
+    <div class="ucheck-keep">
+      <div class="ucheck-keep-title">업로드 후 안내</div>
+      업로드 후 3개월간 좋아요·댓글 수 공개 유지 · 게시물 1년간 유지(삭제 불가) · 2차 활용 기간 무기한
+    </div>
+  </div>
 </div>
 
 <!-- FOOTER -->
@@ -2172,6 +2263,54 @@
     });
   });
 
+</script>
+<button type="button" class="ucheck-fab" id="ucheckFab" aria-label="업로드 전 체크리스트로 이동">&#9989; 업로드 전 체크리스트 <span class="ucheck-fab-count" id="ucheckFabCount">0/6</span></button>
+
+<script>
+  (function () {
+    var box = document.getElementById('uploadCheck');
+    var fab = document.getElementById('ucheckFab');
+    if (!box || !fab) return;
+    var items = Array.prototype.slice.call(box.querySelectorAll('.ucheck-item'));
+    var inputs = items.map(function (el) { return el.querySelector('input'); });
+    var KEY = 'purcell_ucheck_' + location.pathname;
+
+    try {
+      var saved = JSON.parse(localStorage.getItem(KEY) || '[]');
+      inputs.forEach(function (inp, i) { inp.checked = !!saved[i]; });
+    } catch (e) {}
+
+    function update() {
+      var n = inputs.filter(function (inp) { return inp.checked; }).length;
+      items.forEach(function (el, i) { el.classList.toggle('done', inputs[i].checked); });
+      document.getElementById('ucheckCount').textContent = n + ' / ' + inputs.length;
+      document.getElementById('ucheckFabCount').textContent = n + '/' + inputs.length;
+      document.getElementById('ucheckBar').style.width = (n / inputs.length * 100) + '%';
+      box.classList.toggle('all-done', n === inputs.length);
+      try { localStorage.setItem(KEY, JSON.stringify(inputs.map(function (inp) { return inp.checked; }))); } catch (e) {}
+    }
+    inputs.forEach(function (inp) { inp.addEventListener('change', update); });
+    update();
+
+    fab.addEventListener('click', function () {
+      box.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    var boxVisible = false;
+    function setFab() {
+      var show = window.scrollY > 300 && !boxVisible;
+      fab.classList.toggle('show', show);
+      document.body.classList.toggle('has-fab', show);
+    }
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        boxVisible = entries[0].isIntersecting;
+        setFab();
+      }).observe(box);
+    }
+    window.addEventListener('scroll', setFab, { passive: true });
+    setFab();
+  })();
 </script>
 </body>
 </html>
