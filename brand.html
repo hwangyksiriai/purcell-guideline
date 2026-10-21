@@ -1590,41 +1590,69 @@
     }
     .ucheck-keep-title { font-weight: 700; color: var(--text-mid); margin-bottom: 2px; }
 
-    /* 하단 플로팅 버튼 */
-    .ucheck-fab {
+    /* 하단 플로팅 가이드 내비 */
+    .gnav {
       position: fixed;
       left: 50%;
-      bottom: max(16px, env(safe-area-inset-bottom, 16px));
+      bottom: max(12px, env(safe-area-inset-bottom, 12px));
       transform: translate(-50%, 16px);
       z-index: 900;
-      display: inline-flex;
+      width: calc(100% - 24px);
+      max-width: 616px;
+      display: flex;
       align-items: center;
-      gap: 8px;
-      min-height: 48px;
-      padding: 0 20px;
-      border: none;
+      gap: 6px;
+      padding: 6px;
+      background: rgba(21,42,57,0.94);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.12);
       border-radius: 100px;
-      background: var(--brand);
-      color: var(--on-brand);
-      font-family: inherit;
-      font-size: 14px;
-      font-weight: 700;
-      white-space: nowrap;
       box-shadow: 0 8px 24px rgba(21,42,57,0.28);
-      cursor: pointer;
       opacity: 0;
       pointer-events: none;
       transition: opacity .2s, transform .2s;
     }
-    .ucheck-fab.show { opacity: 1; pointer-events: auto; transform: translate(-50%, 0); }
-    .ucheck-fab-count {
-      font-size: 11.5px;
-      background: rgba(255,255,255,0.16);
-      border-radius: 20px;
-      padding: 2px 8px;
+    .gnav.show { opacity: 1; pointer-events: auto; transform: translate(-50%, 0); }
+    .gnav-top {
+      flex: none;
+      width: 38px;
+      height: 38px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.12);
+      color: #FFFFFF;
+      font-size: 15px;
+      cursor: pointer;
     }
-    body.has-fab .copy-toast { bottom: calc(max(16px, env(safe-area-inset-bottom, 16px)) + 60px); }
-    body.has-fab .footer { padding-bottom: calc(max(36px, env(safe-area-inset-bottom, 36px)) + 56px); }
+    .gnav-list {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      gap: 4px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+    .gnav-list::-webkit-scrollbar { display: none; }
+    .gnav-chip {
+      flex: none;
+      height: 38px;
+      padding: 0 14px;
+      border: none;
+      border-radius: 100px;
+      background: transparent;
+      color: rgba(255,255,255,0.72);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 500;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+    .gnav-chip.active { background: #FFFFFF; color: var(--brand-deep); font-weight: 700; }
+    body.has-nav .copy-toast { bottom: calc(max(12px, env(safe-area-inset-bottom, 12px)) + 64px); }
+    body.has-nav .footer { padding-bottom: calc(max(36px, env(safe-area-inset-bottom, 36px)) + 64px); }
 
   </style>
 </head>
@@ -2264,13 +2292,16 @@
   });
 
 </script>
-<button type="button" class="ucheck-fab" id="ucheckFab" aria-label="업로드 전 체크리스트로 이동">&#9989; 업로드 전 체크리스트 <span class="ucheck-fab-count" id="ucheckFabCount">0/6</span></button>
+<nav class="gnav" id="guideNav" aria-label="가이드 바로가기">
+  <button type="button" class="gnav-top" id="gnavTop" aria-label="맨 위로">&#8593;</button>
+  <div class="gnav-list" id="gnavList"></div>
+</nav>
 
 <script>
+  /* 업로드 전 체크리스트 */
   (function () {
     var box = document.getElementById('uploadCheck');
-    var fab = document.getElementById('ucheckFab');
-    if (!box || !fab) return;
+    if (!box) return;
     var items = Array.prototype.slice.call(box.querySelectorAll('.ucheck-item'));
     var inputs = items.map(function (el) { return el.querySelector('input'); });
     var KEY = 'purcell_ucheck_' + location.pathname;
@@ -2284,32 +2315,101 @@
       var n = inputs.filter(function (inp) { return inp.checked; }).length;
       items.forEach(function (el, i) { el.classList.toggle('done', inputs[i].checked); });
       document.getElementById('ucheckCount').textContent = n + ' / ' + inputs.length;
-      document.getElementById('ucheckFabCount').textContent = n + '/' + inputs.length;
       document.getElementById('ucheckBar').style.width = (n / inputs.length * 100) + '%';
       box.classList.toggle('all-done', n === inputs.length);
       try { localStorage.setItem(KEY, JSON.stringify(inputs.map(function (inp) { return inp.checked; }))); } catch (e) {}
     }
     inputs.forEach(function (inp) { inp.addEventListener('change', update); });
     update();
+  })();
 
-    fab.addEventListener('click', function () {
-      box.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  /* 하단 플로팅 가이드 내비 — 섹션·상세 가이드 사이 이동 */
+  (function () {
+    var nav = document.getElementById('guideNav');
+    var list = document.getElementById('gnavList');
+    if (!nav || !list) return;
+
+    function sectionBy(label) {
+      var labels = document.querySelectorAll('.section-label');
+      for (var i = 0; i < labels.length; i++) {
+        if (labels[i].textContent.trim() === label) return labels[i].closest('.section');
+      }
+      return null;
+    }
+    function foldBy(title) {
+      var t = document.querySelectorAll('.fold-title');
+      for (var i = 0; i < t.length; i++) {
+        if (t[i].textContent.trim() === title) return t[i].closest('details');
+      }
+      return null;
+    }
+    var concepts = document.querySelectorAll('.concept-list > details.concept');
+
+    var targets = [
+      ['브랜드', sectionBy('About Brand')],
+      ['캠페인 개요', sectionBy('Campaign Info')],
+      ['제작 가이드', sectionBy('Content Guide')],
+      ['제품 상세', concepts[0]],
+      ['릴스 구성', concepts[1]],
+      ['콘텐츠 컨셉', concepts[2]],
+      ['필수 키컷', concepts[3]],
+      ['자막·워딩', concepts[4]],
+      ['가드레일', foldBy('콘텐츠 가드레일')],
+      ['캡션', foldBy('캡션 참고사항')],
+      ['해시태그', foldBy('해시태그')],
+      ['업로드 체크', document.getElementById('uploadCheck')],
+      ['캠페인 신청', sectionBy('Application')],
+      ['정산', sectionBy('Settlement')]
+    ].filter(function (t) { return t[1]; });
+
+    var chips = targets.map(function (t) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'gnav-chip';
+      b.textContent = t[0];
+      b.addEventListener('click', function () { go(t[1]); });
+      list.appendChild(b);
+      return b;
     });
 
-    var boxVisible = false;
-    function setFab() {
-      var show = window.scrollY > 300 && !boxVisible;
-      fab.classList.toggle('show', show);
-      document.body.classList.toggle('has-fab', show);
+    function go(el) {
+      if (el.tagName === 'DETAILS') el.open = true;
+      var y = el.getBoundingClientRect().top + window.scrollY - 12;
+      window.scrollTo({ top: y, behavior: 'smooth' });
     }
-    if ('IntersectionObserver' in window) {
-      new IntersectionObserver(function (entries) {
-        boxVisible = entries[0].isIntersecting;
-        setFab();
-      }).observe(box);
+
+    document.getElementById('gnavTop').addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    var current = -1;
+    var ticking = false;
+    function onScroll() {
+      ticking = false;
+      var show = window.scrollY > 300;
+      nav.classList.toggle('show', show);
+      document.body.classList.toggle('has-nav', show);
+
+      var line = window.innerHeight * 0.35;
+      var idx = -1;
+      for (var i = 0; i < targets.length; i++) {
+        if (targets[i][1].getBoundingClientRect().top <= line) idx = i;
+      }
+      if (idx !== current) {
+        if (current >= 0) chips[current].classList.remove('active');
+        current = idx;
+        if (idx >= 0) {
+          var c = chips[idx];
+          c.classList.add('active');
+          list.scrollLeft = c.offsetLeft - (list.clientWidth - c.offsetWidth) / 2;
+        }
+      }
     }
-    window.addEventListener('scroll', setFab, { passive: true });
-    setFab();
+    window.addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
+    }, { passive: true });
+    window.addEventListener('resize', onScroll);
+    onScroll();
   })();
 </script>
 </body>
