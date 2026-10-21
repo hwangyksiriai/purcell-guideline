@@ -1659,6 +1659,33 @@
     body.has-nav .copy-toast { bottom: calc(max(12px, env(safe-area-inset-bottom, 12px)) + 64px); }
     body.has-nav .footer { padding-bottom: calc(max(36px, env(safe-area-inset-bottom, 36px)) + 64px); }
 
+    /* 시각 개선 — 아이콘 통일 · 표 정리 */
+    .ico { display: block; flex: none; }
+    .must-icon {
+      width: 30px;
+      height: 30px;
+      margin-top: 0;
+      border-radius: 9px;
+      background: var(--brand-pale);
+      color: var(--brand);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0;
+    }
+    .must-item { align-items: center; }
+    .fold-icon { width: 26px; height: 26px; border-radius: 8px; }
+    .ucheck-title { display: flex; align-items: center; gap: 8px; }
+    .ucheck-title .ico { color: var(--brand); }
+    .warning-box .ico, .note-box-title .ico { display: inline-block; vertical-align: -3px; margin-right: 4px; }
+    .warning-box .ico { color: #B7791F; }
+    .note-box-title .ico { color: var(--brand-text); }
+    @media (max-width: 480px) {
+      /* 표: 좁은 화면에서는 항목명을 위로 올려 줄바꿈이 어색하지 않게 */
+      .spec-row { grid-template-columns: 1fr; }
+      .spec-key { padding: 9px 14px 0; background: transparent; font-size: 11px; letter-spacing: 0.02em; }
+      .spec-val { padding: 2px 14px 11px; }
+    }
   </style>
 </head>
 <body>
@@ -1799,11 +1826,11 @@
 
   <div class="spec-table" style="margin:-6px 0 20px;">
     <div class="spec-row">
-      <div class="spec-key">누구를<br>위한 영상?</div>
+      <div class="spec-key">누구를 <br class="pc-br">위한 영상?</div>
       <div class="spec-val">보습크림을 발라도 금방 다시 당기는 <strong>악건성 피부</strong></div>
     </div>
     <div class="spec-row">
-      <div class="spec-key">그 사람의<br>고민은?</div>
+      <div class="spec-key">그 사람의 <br class="pc-br">고민은?</div>
       <div class="spec-val">
         바를 땐 촉촉한데 몇 시간 뒤면 다시 찢어질 듯 당김<br>
         히터와 찬바람에 얼굴이 바싹 마름<br>
@@ -1812,7 +1839,7 @@
       </div>
     </div>
     <div class="spec-row">
-      <div class="spec-key">퍼셀의<br>해결책은?</div>
+      <div class="spec-key">퍼셀의 <br class="pc-br">해결책은?</div>
       <div class="spec-val">유산균 세라마이드가 비어 있는 장벽을 채워 건조함을 잡고,<br class="pc-br"> <strong>피부가 세라마이드를 스스로 만드는 힘</strong>을 기르도록 도와줘요.</div>
     </div>
   </div>
@@ -1825,15 +1852,15 @@
   <div style="font-size:12px;font-weight:700;color:var(--text-mid);margin:24px 0 10px;letter-spacing:0.03em;">&#10004; 영상 및 캡션 필수 포함</div>
   <div class="must-list">
     <div class="must-item">
-      <div class="must-icon">&#127916;</div>
+      <div class="must-icon"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m16 10 6-3v10l-6-3"/></svg></div>
       <div><strong>[영상]</strong> 후킹 &gt; 피부고민 B/A &gt; 바르는 장면 &gt;<br class="pc-br"> 시간이 흐른 뒤 개선된 피부를 담아주세요! <strong>(필수컷 확인)</strong></div>
     </div>
     <div class="must-item">
-      <div class="must-icon">&#9997;&#65039;</div>
+      <div class="must-icon"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></div>
       <div><strong>[캡션]</strong> 제품 사용 후 느낀 장점이나 추천 사용 상황을 자유롭게 써주세요.</div>
     </div>
     <div class="must-item">
-      <div class="must-icon">&#128279;</div>
+      <div class="must-icon"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></svg></div>
       <div><strong>[계정 태그]</strong> <span class="nb">@purcell.seoul</span> 계정 태그 <strong>필수</strong></div>
     </div>
   </div>
@@ -2150,7 +2177,7 @@
   <div class="fold-group">
   <details class="fold">
     <summary class="fold-summary">
-      <span class="fold-icon">&#9878;</span>
+      <span class="fold-icon"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg></span>
       <span class="fold-title">콘텐츠 가드레일</span>
       <span class="fold-count">Must&nbsp;/&nbsp;Avoid</span>
       <span class="fold-chevron">&#8964;</span>
@@ -2178,7 +2205,7 @@
 
   <details class="fold">
     <summary class="fold-summary">
-      <span class="fold-icon">&#9997;</span>
+      <span class="fold-icon"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span>
       <span class="fold-title">캡션 참고사항</span>
       <span class="fold-count">Tip</span>
       <span class="fold-chevron">&#8964;</span>
@@ -2204,7 +2231,7 @@
 
   <details class="fold">
     <summary class="fold-summary">
-      <span class="fold-icon">#</span>
+      <span class="fold-icon"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h16M4 15h16M10 3 8 21M16 3l-2 18"/></svg></span>
       <span class="fold-title">해시태그</span>
       <span class="fold-badge">필수</span>
       <span class="fold-chevron">&#8964;</span>
@@ -2231,7 +2258,7 @@
   <!-- 업로드 전 체크리스트 -->
   <div class="ucheck" id="uploadCheck">
     <div class="ucheck-head">
-      <div class="ucheck-title">&#9989; 업로드 전, 확인하셨나요?</div>
+      <div class="ucheck-title"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>업로드 전, 확인하셨나요?</div>
       <div class="ucheck-count" id="ucheckCount">0 / 6</div>
     </div>
     <div class="ucheck-sub">게시 전 아래 항목을 하나씩 체크해 주세요.</div>
