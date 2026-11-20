@@ -1702,6 +1702,17 @@
     @media (max-width: 480px) {
       .ref-grid { grid-template-columns: 1fr 1fr; }
     }
+    /* 브랜드 강조 요청 */
+    .voice-box { background: var(--brand-pale); border: 2px solid var(--brand); border-radius: 14px; padding: 20px 22px; margin: 20px 0 0; }
+    .voice-head { font-size: 15px; font-weight: 700; color: var(--text-dark); line-height: 1.5; margin-bottom: 10px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+    .voice-badge { font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em; background: var(--brand); color: var(--on-brand); padding: 4px 10px; border-radius: 999px; }
+    .voice-item { display: flex; gap: 12px; padding: 11px 0; border-top: 1px solid var(--border); }
+    .voice-num { flex: 0 0 22px; height: 22px; border-radius: 50%; background: var(--brand); color: var(--on-brand); font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+    .voice-text { font-size: 13px; color: var(--text-dark); line-height: 1.6; min-width: 0; }
+    .voice-text strong { color: var(--brand-text); }
+    .voice-text small { display: block; font-size: 12px; color: var(--text-mid); margin-top: 3px; }
+    .voice-foot { margin-top: 6px; padding: 11px 14px; background: #FFFFFF; border-radius: 10px; font-size: 12.5px; color: var(--text-dark); line-height: 1.55; }
+    @media (max-width: 480px) { .voice-box { padding: 16px; } .voice-text { font-size: 12.5px; } .voice-head { font-size: 14px; } }
   </style>
 </head>
 <body>
@@ -1870,15 +1881,36 @@
     <div class="key-msg-text" style="margin-top:-8px;"><strong>톤앤매너는 자유롭게</strong>, 아래 <strong>흐름과 필수 요소</strong>만 꼭 지켜주세요!<br>자유롭게 기획하시되, <strong>경험담 위주 / 실사용 후기 / 찐텐션을 담아 / 후킹되게끔</strong> 잘 부탁드립니다!</div>
   </div>
 
+  <div class="voice-box">
+    <div class="voice-head"><span class="voice-badge">브랜드 강조 요청</span>이번 콘텐츠, 이것만은 꼭!</div>
+    <div class="voice-item">
+      <div class="voice-num">1</div>
+      <div class="voice-text"><strong>브랜드가 전하는 말 말고, 내가 써보고 체감한 사용기</strong>로 찐텐을 담아 추천해 주세요.<small>날것의 표현 대환영! 성분·효능 설명을 읽듯이 전달하지 않아도 돼요.</small></div>
+    </div>
+    <div class="voice-item">
+      <div class="voice-num">2</div>
+      <div class="voice-text"><strong>어떻게 사용했고, 피부가 얼마나 변했는지</strong> 위주로 설명해 주세요.<small>언제·얼마나·어떻게 발랐는지 → 그 뒤 내 피부가 어떻게 달라졌는지</small></div>
+    </div>
+    <div class="voice-item">
+      <div class="voice-num">3</div>
+      <div class="voice-text"><strong>친구한테 써보니 좋았던 화장품 얘기하듯</strong> 말해주세요.<small>ex) "야 이거 바르고 자니까 아침에 세수해도 안 당기더라" · "나 오후에 화장 안 뜬 거 진짜 오랜만이야"</small></div>
+    </div>
+    <div class="voice-item">
+      <div class="voice-num">4</div>
+      <div class="voice-text"><strong>B/A 자료화면은 최대한 많이!</strong><small>다양한 부위·상황·시간대로 여러 개 담아주실수록 좋아요.</small></div>
+    </div>
+    <div class="voice-foot">제형컷 · 임상수치는 <strong>안 넣어도 괜찮아요.</strong> 그만큼 내 피부 변화와 B/A를 더 보여주세요!</div>
+  </div>
+
   <div style="font-size:12px;font-weight:700;color:var(--text-mid);margin:24px 0 10px;letter-spacing:0.03em;">&#10004; 영상 및 캡션 필수 포함</div>
   <div class="must-list">
     <div class="must-item">
       <div class="must-icon"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m16 10 6-3v10l-6-3"/></svg></div>
-      <div><strong>[영상]</strong> 후킹 &gt; 피부고민 B/A &gt; 바르는 장면 &gt;<br class="pc-br"> 시간이 흐른 뒤 개선된 피부를 담아주세요! <strong>(필수컷 확인)</strong></div>
+      <div><strong>[영상]</strong> 후킹 &gt; 피부고민 B/A &gt; 바르는 장면 &gt;<br class="pc-br"> 시간이 흐른 뒤 개선된 피부를 담아주세요! <strong>(필수컷 확인)</strong><br><strong>B/A 자료화면은 최대한 많이</strong> 부탁드려요!</div>
     </div>
     <div class="must-item">
       <div class="must-icon"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></div>
-      <div><strong>[캡션]</strong> 제품 사용 후 느낀 장점이나 추천 사용 상황을 자유롭게 써주세요.</div>
+      <div><strong>[캡션]</strong> 브랜드 소개 말고, <strong>내가 써보고 느낀 점</strong>을 친구한테 추천하듯 자유롭게 써주세요.</div>
     </div>
     <div class="must-item">
       <div class="must-icon"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></svg></div>
@@ -1981,7 +2013,7 @@
             <div class="tl-time">8~22초</div>
             <div>
               <div class="tl-name">③ 진행 · 바르는 모습 + B/A</div>
-              <div class="tl-desc">같은 구도로 <strong>Before &rarr; After</strong> 위주로 보여주세요 <strong>(필수)</strong></div>
+              <div class="tl-desc">같은 구도로 <strong>Before &rarr; After</strong> 위주로 보여주세요 <strong>(필수)</strong><br>어떻게 발랐는지 + 피부가 얼마나 달라졌는지, <strong>B/A는 많을수록 좋아요!</strong></div>
             </div>
           </div>
           <div class="tl-item">
@@ -2008,7 +2040,7 @@
           </div>
           <div class="spec-row">
             <div class="spec-key">수치 자막</div>
-            <div class="spec-val">영상당 <strong>1~2개</strong>, 영상 하단 각주 참고</div>
+            <div class="spec-val"><strong>선택</strong> · 넣는다면 영상당 1~2개 + 영상 하단 각주</div>
           </div>
         </div>
       </div>
@@ -2138,7 +2170,7 @@
         <span class="concept-chevron">&#8964;</span>
       </summary>
       <div class="concept-body">
-        <div class="concept-intro">아래 4가지 키컷은 <strong>2차 활용(광고 소재)</strong>을 위해 꼭 담아주세요! <strong>(필수)</strong></div>
+        <div class="concept-intro">아래 키컷은 <strong>2차 활용(광고 소재)</strong>을 위해 꼭 담아주세요! <strong>(A·C·D 필수 / B 제형컷은 선택)</strong></div>
         <div class="angle-grid" style="margin-top:14px;">
           <div class="angle-item">
             <div class="angle-thumb"><img src="../image/keycut-a.jpg" alt="무보정 BEFORE 예시" loading="lazy" style="aspect-ratio:1/1;"><span class="angle-thumb-tag">예시</span></div>
@@ -2148,7 +2180,7 @@
           </div>
           <div class="angle-item">
             <div class="angle-thumb"><img src="../image/keycut-b.jpg" alt="세라캡슐 녹는 제형 예시" loading="lazy" style="aspect-ratio:1/1;"><span class="angle-thumb-tag">예시</span></div>
-            <div class="angle-num">KEY CUT B</div>
+            <div class="angle-num">KEY CUT B <span style="font-weight:500;color:var(--text-light);">· 선택</span></div>
             <div class="angle-name">세라캡슐 녹는 제형</div>
             <div class="angle-desc">손등 위나 얼굴에 캡슐이 사르르 녹아<br class="pc-br"> 스미는 장면</div>
           </div>
@@ -2156,7 +2188,7 @@
             <div class="angle-thumb"><img src="../image/keycut-c.jpg" alt="B/A 예시" loading="lazy" style="aspect-ratio:1/1;"><span class="angle-thumb-tag">예시</span></div>
             <div class="angle-num">KEY CUT C</div>
             <div class="angle-name">B/A (각질, 건조, 화장뜸)</div>
-            <div class="angle-desc">BEFORE &harr; AFTER 화면 전환 or 얼굴 반쪽 비교</div>
+            <div class="angle-desc">BEFORE &harr; AFTER 화면 전환 or 얼굴 반쪽 비교<br><strong>최대한 많이</strong> 담아주세요!</div>
           </div>
           <div class="angle-item">
             <div class="angle-thumb"><img src="../image/keycut-d.jpg" alt="탐나는 피부 표현 예시" loading="lazy" style="aspect-ratio:1/1;"><span class="angle-thumb-tag">예시</span></div>
@@ -2173,15 +2205,15 @@
     <details class="concept">
       <summary class="concept-summary">
         <span class="concept-num">6</span>
-        <span class="concept-name">필수 자막&nbsp;·&nbsp;<span class="nb">수치 &amp; 워딩 가이드</span></span>
+        <span class="concept-name">자막&nbsp;·&nbsp;<span class="nb">수치(선택) &amp; 워딩 가이드</span></span>
         <span class="concept-chevron">&#8964;</span>
       </summary>
       <div class="concept-body">
-        <div class="concept-intro">숫자는 <strong>영상당 1~2개만, 자막으로 크게!</strong> 수치 노출 시 <strong>영상 하단에 각주</strong>를 꼭 넣어주세요.</div>
+        <div class="concept-intro">임상 수치는 <strong>안 넣어도 괜찮아요.</strong> 넣는다면 <strong>영상당 1~2개만</strong>, 수치 노출 시 <strong>영상 하단에 각주</strong>를 꼭 넣어주세요.</div>
 
         <div class="num-list">
           <div class="num-item key">
-            <div class="num-tag">필수</div>
+            <div class="num-tag">핵심</div>
             <div class="num-text"><strong>유산균 세라마이드 25%</strong> 고함량</div>
           </div>
           <div class="num-item">
@@ -2217,6 +2249,7 @@
         <div class="ok-box">
           <div class="ok-title">OK · 이렇게 말해주세요</div>
           <ul class="claim-list">
+            <li><span><strong>내 말투 그대로</strong> &mdash; "바르고 잤더니 아침에 안 당기더라" 같은 실제 체감 표현</span></li>
             <li><span>추워진 날씨, <strong>혹한기</strong>에 대한 피부 고민 언급</span></li>
             <li><span><strong>히터 바람</strong>이나 피부가 건조해지는 상황 언급</span></li>
             <li><span>즉각 보습, <strong>대조 크림 대비 2.6배</strong></span></li>
@@ -2255,12 +2288,13 @@
     <div class="guard-box must">
       <div class="guard-title">Must Include</div>
       <div class="guard-item">피부 고민 · 바르는 장면 · 시간 경과 후 피부 · B/A</div>
-      <div class="guard-item">필수 키컷 4종</div>
-      <div class="guard-item">수치 자막 1~2개 + 영상 하단 각주</div>
+      <div class="guard-item">필수 키컷 (A·C·D) · B/A 자료화면 최대한 많이</div>
+      <div class="guard-item">본인 사용기 · 피부 변화 위주의 찐텐 추천</div>
       <div class="guard-item">@purcell.seoul 계정 태그 · 필수 해시태그</div>
     </div>
     <div class="guard-box avoid">
       <div class="guard-title">Avoid</div>
+      <div class="guard-item">브랜드 설명 · 성분 · 수치를 읽듯이 나열</div>
       <div class="guard-item">보정 필터 · 뷰티 카메라 사용</div>
       <div class="guard-item">B/A 구도·조명·거리를 다르게 촬영</div>
       <div class="guard-item">각주 없이 수치만 노출</div>
@@ -2328,14 +2362,15 @@
   <div class="ucheck" id="uploadCheck">
     <div class="ucheck-head">
       <div class="ucheck-title"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>업로드 전, 확인하셨나요?</div>
-      <div class="ucheck-count" id="ucheckCount">0 / 7</div>
+      <div class="ucheck-count" id="ucheckCount">0 / 8</div>
     </div>
     <div class="ucheck-sub">게시 전 아래 항목을 하나씩 체크해 주세요.</div>
     <div class="ucheck-bar"><span id="ucheckBar"></span></div>
     <div class="ucheck-list">
       <label class="ucheck-item"><input type="checkbox"><span class="ucheck-text"><strong>@purcell.seoul</strong> 계정 태그 + 공동작업자 요청<small>게시물 업로드 시 공식 계정 태그와 공동작업자 요청을 함께 보내주세요.</small></span></label>
       <label class="ucheck-item"><input type="checkbox"><span class="ucheck-text">필수 해시태그 5개<small>#퍼셀 #구원크림 #세라마이드크림 #보습크림 #혹한기구원크림</small></span></label>
-      <label class="ucheck-item"><input type="checkbox"><span class="ucheck-text">필수 장면 · 필수 키컷 4종 포함<small>피부 고민(무보정 BEFORE) · 캡슐 녹는 제형 · B/A(각질·건조·화장뜸) · 피부 표현·화잘먹</small></span></label>
+      <label class="ucheck-item"><input type="checkbox"><span class="ucheck-text">필수 장면 · 필수 키컷 포함<small>피부 고민(무보정 BEFORE) · B/A(각질·건조·화장뜸) · 피부 표현·화잘먹 (캡슐 제형컷은 선택)</small></span></label>
+      <label class="ucheck-item"><input type="checkbox"><span class="ucheck-text">본인 사용기 · 피부 변화 위주 + <strong>B/A 여러 개</strong><small>브랜드 설명 대신, 친구한테 추천하듯 날것의 표현으로 담았나요?</small></span></label>
       <label class="ucheck-item"><input type="checkbox"><span class="ucheck-text">수치 자막을 넣었다면 영상 하단 각주<small>각주는 가이드의 '복사' 버튼으로 그대로 붙여넣어 주세요.</small></span></label>
       <label class="ucheck-item"><input type="checkbox"><span class="ucheck-text"><strong>초안 제출</strong> 완료<small>업로드 전 초안 제출은 필수예요. 브랜드 확인 후 업로드해 주세요.</small></span></label>
       <label class="ucheck-item"><input type="checkbox"><span class="ucheck-text">제품 수령 후 <strong>7일 이내</strong> 업로드</span></label>
